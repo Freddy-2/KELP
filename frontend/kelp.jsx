@@ -1,6 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import configureStore from './store/store'
+import Root from './components/root'
 
 document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<h1>Welcome to Kelp!</h1>, document.getElementById("root"));
+
+  let store = configureStore();
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  ReactDOM.render(<Root store={store}/>, document.getElementById("root"));
 });
