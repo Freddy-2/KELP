@@ -1,20 +1,20 @@
 export const signup = (user) => {
   return $.ajax({
-    url: "/api/user",
+    url: "/api/users",
     method: "POST",
     data: { user }
   });
 }
 export const login = (user) => {
   return $.ajax({
-    url: "/api/session",
+    url: "/api/sessions",
     method: "POST",
     data: { user }
   });
 }
 export const logout = (userId) => {
   return $.ajax({
-    url: `/api/session/${userId}`,
+    url: `/api/sessions/${userId}`,
     method: "delete",
   });
 }
