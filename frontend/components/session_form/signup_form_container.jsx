@@ -6,7 +6,7 @@ import React from 'react';
 
 const msp = (state) => {
   return{
-  nav: <Link to="/signup">sign up</Link>,
+  nav: <Link to="/signup">Sign up</Link>,
   errors: state.errors.session,
   formType: "signup"
   }

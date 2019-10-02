@@ -272,6 +272,7 @@ var mdp = function mdp(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -294,6 +295,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var SessionForm =
 /*#__PURE__*/
 function (_React$Component) {
@@ -313,6 +315,7 @@ function (_React$Component) {
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.namesForSignUp = _this.namesForSignUp.bind(_assertThisInitialized(_this));
+    _this.underSubmitButton = _this.underSubmitButton.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -366,6 +369,34 @@ function (_React$Component) {
       return '';
     }
   }, {
+    key: "underSubmitButton",
+    value: function underSubmitButton() {
+      if (this.props.formType === "signup") {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "under-submit-session"
+        }, "Already on Kelp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/login"
+        }, "Login"));
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "under-submit-session"
+        }, "New to Kelp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/signup"
+        }, "Sign up"));
+      }
+    }
+  }, {
+    key: "aboveInputs",
+    value: function aboveInputs() {
+      if (this.props.formType === "signup") {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Sign Up for Kelp ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Connect with great local businesses ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "By continuing, you agree to Kelp\u2019s Terms of Service and acknowledge Kelp\u2019s Privacy Policy.");
+      } else {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Log In to Kelp ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "New to Kelp? ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/signup"
+        }, "Sign up"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "By logging in, you agree to Kelp\u2019s Terms of Service and Privacy Policy.");
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       if (this.props.user) {
@@ -379,9 +410,9 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "signup-form-box"
-      }, "Welcome to Kelp!", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Please ", this.props.formType, " or ", this.props.nav, this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.aboveInputs(), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "signup-login-form"
-      }, this.namesForSignUp(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "email:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.namesForSignUp()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "email:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.email,
         onChange: this.update('email'),
@@ -395,7 +426,7 @@ function (_React$Component) {
         className: "session-submit",
         type: "submit",
         value: this.props.formType
-      }))));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.underSubmitButton()))));
     }
   }]);
 
@@ -431,7 +462,7 @@ var msp = function msp(state) {
   return {
     nav: react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
       to: "/signup"
-    }, "sign up"),
+    }, "Sign up"),
     errors: state.errors.session,
     formType: "signup"
   };

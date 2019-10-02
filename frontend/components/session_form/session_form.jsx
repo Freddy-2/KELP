@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.namesForSignUp = this.namesForSignUp.bind(this);
+    this.underSubmitButton = this.underSubmitButton.bind(this);
   }
 
   update(field) {
@@ -58,6 +60,43 @@ class SessionForm extends React.Component {
     }
     return '';
   }
+
+  underSubmitButton(){
+    if (this.props.formType === "signup") {
+      return (
+        <div className="under-submit-session">
+          Already on Kelp? <Link to="/login">Login</Link>
+        </div>
+      );
+    } else {
+      return (
+        <div className="under-submit-session">
+          New to Kelp? <Link to="/signup">Sign up</Link>
+        </div>
+      );
+    }
+  }
+
+  aboveInputs(){
+    if (this.props.formType === "signup") { 
+      return(
+        <div>
+         Sign Up for Kelp <br/>
+       Connect with great local businesses <br/>
+       By continuing, you agree to Kelp’s Terms of Service and acknowledge Kelp’s Privacy Policy.
+        </div>
+      )
+    } else{
+        return(
+          <div>
+            Log In to Kelp <br/>
+          New to Kelp? <Link to="/signup">Sign up</Link> <br/>
+          By logging in, you agree to Kelp’s Terms of Service and Privacy Policy.
+          </div>
+
+        )
+      }
+  }
    
 
 
@@ -68,12 +107,11 @@ class SessionForm extends React.Component {
    return (
       <div className="kelpEntryForm">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
-          Welcome to Kelp!
-          <br />
-          Please {this.props.formType} or {this.props.nav}
+        {this.aboveInputs()}
+          
           {this.renderErrors()}
           <div className="signup-login-form">
-            {this.namesForSignUp()}
+           <div>{this.namesForSignUp()}</div> 
             <br />
             <label>email:
               <input type="text"
@@ -92,6 +130,7 @@ class SessionForm extends React.Component {
             </label>
             <br />
             <input className="session-submit" type="submit" value={this.props.formType} />
+            <div>{this.underSubmitButton()}</div>
           </div>
         </form>
       </div>
