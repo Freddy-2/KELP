@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="signup-form-box">
           Welcome to Kelp!
           <br />
-          Please {this.props.formType} or {this.props.navLink}
+          Please {this.props.formType} or {this.props.nav}
           {this.renderErrors()}
           <div className="signup-login-form">
             {this.namesForSignUp()}
