@@ -36,7 +36,7 @@ class HomePage extends React.Component {
 
         <div className="under-search">
             <label className="best-business">Find the Best Businessess in the Deep Blue Sea</label>
-            <img src="krustyKrab.png" alt=""/>
+            {/* <img src="krustyKrab.png" alt=""/> */}
         </div>
       </div>
       </>
