@@ -18,16 +18,18 @@
 }
 /* div containing both of the buttons for login and signup */
 .login-signup-buttons{
-display: flex;
+   display: flex;
+   justify-content: space-between;
 }
 /* login button when not logged in */
 .login-header{
-    background: transparent;
+    /* background: transparent;
     box-shadow: none;
     border-radius: 4px;
     border: 2px solid #fff;
     margin-top: -2px;
-    padding: 7px 14px 6px;
+    padding: 7px 14px 6px; */
+    
 }
 /* signup button when not logged in */
 .signup-header{
@@ -37,11 +39,13 @@ display: flex;
     border: 2px solid #fff;
     margin-top: -2px;
     padding: 7px 14px 6px;
+    color: #fff;
     
 }
-.signup-header :hover{
+.signup-header:hover{
   background-color: #fff;
+  color: gray;
 }
-.login-header :hover{
+/* .login-header :hover{
   background-color: #fff;
-}
+} */
