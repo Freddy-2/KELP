@@ -5,14 +5,17 @@
     padding: 120px;
 }
 /* high fiving image */
-.spongeFive{
+.sponge-five{
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
 
 }
 /* signup form */
 .signup-form-box{
     text-align: center;
     display: flex;
-    margin: 20px;
+    /* margin: 20px; */
     flex-direction: column;
     width: 275px;
 }
@@ -61,7 +64,11 @@
 }
 /* this is what appears under the form */
 .under-submit-session{
-
+    font-size: 12px;
+    line-height: 1.5em;
+    color: turquoise;
+    font-weight: normal;
+    float: right;
 }
 /* logo link container */
 .kelp-logo-form-page{

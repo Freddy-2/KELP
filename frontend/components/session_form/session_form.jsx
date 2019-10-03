@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
 
   demoButton(e){
     e.preventDefault();
-    this.props.processForm({email:"sponch", password:"sponch1" }).then(() => this.props.history.push("/"))
+    this.props.processForm({ email:"sponch@sponch.mail", password:"sponch1" }).then(() => this.props.history.push("/"))
   }
 
   renderErrors() {
@@ -152,8 +152,8 @@ class SessionForm extends React.Component {
             <div>{this.underSubmitButton()}</div>
           </div>         
         </form>      
-      <div className="spongeFive">
-        <img src={window.spongeFiveUrl}/>
+      <div className="sponge-five">
+           <img className="sponge-five" src={window.spongeFiveUrl}/>
       </div>
       </div>
 
