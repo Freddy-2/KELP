@@ -1,6 +1,8 @@
 /* overall entry div */
 .kelp-entry-form{
-
+    display: flex;
+    justify-content: space-evenly;
+    padding: 120px;
 }
 /* high fiving image */
 .spongeFive{
@@ -8,11 +10,28 @@
 }
 /* signup form */
 .signup-form-box{
-
+    text-align: center;
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    width: 275px;
 }
 /* this houses email and password inputs that will be on forms */
 .signup-login-form{
+    display: flex;
+    flex-direction: column;
 
+}
+.email-input{
+  margin: 5px;
+  width: 95%;
+  border-radius: 2px;
+}
+
+.password-input{
+  width: 95%;
+  margin: 5px;
+  border-radius: 2px;
 }
 /* email and password inputs that will be on forms */
 .signup-login-input{
@@ -20,15 +39,25 @@
 }
 /* this is only on the signup page */
 .signup-first-last{
-
+    display: flex;
+    justify-content: space-evenly;
 }
+
 /* this is the inputs for whats only on signup page */
 .signup-input{
-
+  border-radius: 2px;
 }
 /* input to submit the form */
 .session-submit{
-
+    width: 100%;
+    cursor: pointer;    
+    padding: 7px;
+    font-size: 16px;
+    color: #fff;
+    background: blue;
+    border: 1px solid blue;
+    border-radius: 4px;
+    font-weight: bold;
 }
 /* this is what appears under the form */
 .under-submit-session{
@@ -50,7 +79,30 @@
 }
 
 .form-page-header{
-    background-color: powderblue;
+    background-color: coral;
     display: flex;
-    justify-content: center;
+    justify-content: center
+}
+
+.signup-login-h2{
+    font-weight: bold;
+    margin-bottom: -5px;
+    color: blue;
+    font-size: 22px;
+}
+.subhead{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.terms-and-condits{
+    color: #333;
+    font-size: 12px;
+    line-height: 1.2em;
+}
+
+.up-top{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }

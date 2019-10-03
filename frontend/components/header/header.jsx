@@ -10,8 +10,8 @@ const Header = props => {
         <button>Write A Review</button>
       </div>
       <div className="login-signup-buttons">
-        <a href="#/login" className="login-header">Login</a> 
-        <button > <Link to="/signup" className="signup-header" >Sign up</Link></button> 
+        <Link to="/login" className="login-header">Login</Link> 
+        <Link to="/signup" className="signup-header">Sign up</Link>
       </div>
     </nav>
   );

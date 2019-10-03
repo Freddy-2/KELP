@@ -9,7 +9,7 @@ const msp = (state) => {
   return{
   nav: <Link to="/login">Login</Link>,
   errors: state.errors.session,
-  formType: "login"
+  formType: "Login"
   }
 }
 
