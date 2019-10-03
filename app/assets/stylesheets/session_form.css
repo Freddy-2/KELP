@@ -34,3 +34,23 @@
 .under-submit-session{
 
 }
+/* logo link container */
+.kelp-logo-form-page{
+  display: flex;
+  /* margin: 10px auto; */
+  padding: 7px 0;
+  height: 30px;
+  width: 70px;
+  /* background-color: powderblue; */
+}
+/* logo link to homepage */
+.logo-link-form-page{
+  
+
+}
+
+.form-page-header{
+    background-color: powderblue;
+    display: flex;
+    justify-content: center;
+}

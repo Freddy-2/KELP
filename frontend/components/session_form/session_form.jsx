@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.namesForSignUp = this.namesForSignUp.bind(this);
     this.underSubmitButton = this.underSubmitButton.bind(this);
+    this.demoButton = this.demoButton.bind(this);
   }
 
   update(field) {
@@ -24,6 +25,11 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state).then(() => this.props.history.push("/"));
+  }
+
+  demoButton(e){
+    e.preventDefault();
+    this.props.processForm({email:"sponch", password:"sponch1" }).then(() => this.props.history.push("/"))
   }
 
   renderErrors() {
@@ -91,7 +97,8 @@ class SessionForm extends React.Component {
           <div>
             Log In to Kelp <br/>
           New to Kelp? <Link to="/signup">Sign up</Link> <br/>
-          By logging in, you agree to Kelp’s Terms of Service and Privacy Policy.
+          By logging in, you agree to Kelp’s Terms of Service and Privacy Policy. <br/>
+          <button onClick={this.demoButton}>Demo User</button>
           </div>
 
         )
@@ -104,9 +111,17 @@ class SessionForm extends React.Component {
     if (this.props.user) {
       <Redirect to="/" />;
     }
-   return (
+   return (  
+     <>    
+      <header className="form-page-header">
+      <Link to="/" className="logo-link-form-page">
+         <img src={window.kelpLogoUrl} className="kelp-logo-form-page" />
+       </Link>
+       </header>
       <div className="kelpEntryForm">
-       <img src={window.spongeFiveUrl} className="spongeFive" />
+         <div className="spongeFive">
+       <img src={window.spongeFiveUrl}  />
+       </div>
         <form onSubmit={this.handleSubmit} className="signup-form-box">
         {this.aboveInputs()}
           
@@ -115,7 +130,7 @@ class SessionForm extends React.Component {
            <div>{this.namesForSignUp()}</div> 
             <br />
             <label>email:
-              <input type="text"
+              <input type="email"
                 value={this.state.email}
                 onChange={this.update('email')}
                className="signup-login-input"
@@ -135,6 +150,8 @@ class SessionForm extends React.Component {
           </div>
         </form>
       </div>
+
+      </>
     );
   }
 }

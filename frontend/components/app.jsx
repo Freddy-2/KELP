@@ -7,13 +7,6 @@ import { Route, Link } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <header>
-      <Link to="/" className="header-link">
-        <h1>Kelp!</h1>
-      </Link>
-      <HeaderContainer />
-    </header>
-
     <Route path="/login" component={LoginFormContainer} />
     <Route path="/signup" component={SignupFormContainer} />
     <Route exact path="/" component={HomePageContainer} />

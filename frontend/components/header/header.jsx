@@ -6,9 +6,13 @@ import { Link } from 'react-router-dom';
 const Header = props => {
   const sessionLinks = () => (
     <nav className="login-signup-header">
-      <button className="login-header"><Link to="/login"> Login</Link></button> 
-      
-      <button className="signup-header"> <Link to="/signup" >Sign up</Link></button> 
+      <div>
+        <button>Write A Review</button>
+      </div>
+      <div className="login-signup-buttons">
+        <a href="#/login" className="login-header">Login</a> 
+        <button > <Link to="/signup" className="signup-header" >Sign up</Link></button> 
+      </div>
     </nav>
   );
   const personalGreeting = () => (

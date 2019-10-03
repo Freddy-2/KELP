@@ -8,13 +8,40 @@
 }
  /* nav for header when not logged in */
 .login-signup-header{
-
+   display: flex;
+   justify-content: space-between;
+   margin: 0 auto;
+   width: 600px;
+   padding: 13px;
+  /* border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; */
+}
+/* div containing both of the buttons for login and signup */
+.login-signup-buttons{
+display: flex;
 }
 /* login button when not logged in */
 .login-header{
- 
+    background: transparent;
+    box-shadow: none;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    margin-top: -2px;
+    padding: 7px 14px 6px;
 }
 /* signup button when not logged in */
 .signup-header{
-
+    background: transparent;
+    box-shadow: none;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    margin-top: -2px;
+    padding: 7px 14px 6px;
+    
+}
+.signup-header :hover{
+  background-color: #fff;
+}
+.login-header :hover{
+  background-color: #fff;
 }

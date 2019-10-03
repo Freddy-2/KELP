@@ -1,4 +1,7 @@
 import React from 'react';
+import HeaderContainer from '../header/header_container'
+import Header from '../header/header';
+import {Link} from 'react-router-dom';
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -24,6 +27,11 @@ class HomePage extends React.Component {
     return (
       <>
       <div className='home-page'>
+        <div className='header-and-form'>
+        <HeaderContainer />
+          <Link to="/" className="logo-link">
+              <img src={window.kelpLogoUrl} className="kelp-logo"/>
+          </Link>
           <form className="home-page-search" onSubmit={this.handleSubmit}>
           <label className="find-label"> Find
             <input className="find-search" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
@@ -33,6 +41,7 @@ class HomePage extends React.Component {
           </label>
           <input type="submit" value="Search"/>
         </form>
+        </div>
 
         <div className="under-search">
             <label className="best-business">Find the Best Businessess in the Deep Blue Sea</label><br/>
