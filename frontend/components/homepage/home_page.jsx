@@ -29,18 +29,20 @@ class HomePage extends React.Component {
       <div className='home-page'>
         <div className='header-and-form'>
         <HeaderContainer />
-          <Link to="/" className="logo-link">
+        <div className="logo-and-form">
+            <Link to="/" className="logo-link">
               <img src={window.kelpLogoUrl} className="kelp-logo"/>
-          </Link>
-          <form className="home-page-search" onSubmit={this.handleSubmit}>
-          <label className="find-label"> Find
-            <input className="find-search" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
-          </label>
-          <label className="near-label"> Near
-            <input className="near-search" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
-          </label>
-          <input type="submit" value="Search"/>
-        </form>
+            </Link>
+            <form className="home-page-search" onSubmit={this.handleSubmit}>
+            <label className="find-label"> Find
+              <input className="find-search" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
+            </label>
+            <label className="near-label"> Near
+              <input className="near-search" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
+            </label>
+            <input type="submit" value="Search"/>
+          </form>
+            </div>
         </div>
 
         <div className="under-search">

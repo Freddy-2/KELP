@@ -7,7 +7,7 @@ const Header = props => {
   const sessionLinks = () => (
     <nav className="login-signup-header">
       <div>
-        <button>Write A Review</button>
+        <p className="review">Write A Review</p>
       </div>
       <div className="login-signup-buttons">
         <Link to="/login" className="login-header">Login</Link> 

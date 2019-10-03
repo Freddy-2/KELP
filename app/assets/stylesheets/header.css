@@ -23,13 +23,13 @@
 }
 /* login button when not logged in */
 .login-header{
-    /* background: transparent;
-    box-shadow: none;
-    border-radius: 4px;
-    border: 2px solid #fff;
-    margin-top: -2px;
-    padding: 7px 14px 6px; */
-    
+    display: flex;
+    align-items: center;
+    padding: 7px 14px 6px;
+    text-decoration: none;
+}
+.login-header:hover{
+  text-decoration: underline;
 }
 /* signup button when not logged in */
 .signup-header{
@@ -40,11 +40,17 @@
     margin-top: -2px;
     padding: 7px 14px 6px;
     color: #fff;
-    
+    align-items: baseline;
+    text-decoration: none;
+    transition: 0s background-color;
 }
 .signup-header:hover{
   background-color: #fff;
   color: gray;
+   transition-delay:.2s;
+}
+.review{
+  color: white
 }
 /* .login-header :hover{
   background-color: #fff;
