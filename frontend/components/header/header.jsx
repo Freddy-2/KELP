@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 const Header = props => {
   const sessionLinks = () => (
     <nav className="login-signup-header">
-      <Link to="/login" className="loginHeader">Login</Link>
+      <button className="login-header"><Link to="/login"> Login</Link></button> 
       
-      <Link to="/signup" className="signupHeader">Sign up</Link>
+      <button className="signup-header"> <Link to="/signup" >Sign up</Link></button> 
     </nav>
   );
   const personalGreeting = () => (

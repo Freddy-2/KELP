@@ -23,8 +23,8 @@ class HomePage extends React.Component {
   render() {
     return (
       <>
-      <div className='home-page' onSubmit={this.handleSubmit}>
-        <form className="home-page-search" >
+      <div className='home-page'>
+          <form className="home-page-search" onSubmit={this.handleSubmit}>
           <label className="find-label"> Find
             <input className="find-search" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
           </label>
@@ -35,8 +35,8 @@ class HomePage extends React.Component {
         </form>
 
         <div className="under-search">
-            <label className="best-business">Find the Best Businessess in the Deep Blue Sea</label>
-            {/* <img src="krustyKrab.png" alt=""/> */}
+            <label className="best-business">Find the Best Businessess in the Deep Blue Sea</label><br/>
+            <img src={window.krustyKrabUrl} className="krusty-krab"/>
         </div>
       </div>
       </>

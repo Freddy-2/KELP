@@ -106,6 +106,7 @@ class SessionForm extends React.Component {
     }
    return (
       <div className="kelpEntryForm">
+       <img src={window.spongeFiveUrl} className="spongeFive" />
         <form onSubmit={this.handleSubmit} className="signup-form-box">
         {this.aboveInputs()}
           
