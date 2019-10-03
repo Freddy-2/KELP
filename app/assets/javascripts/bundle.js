@@ -591,7 +591,7 @@ function (_React$Component) {
 
       e.preventDefault();
       this.props.processForm({
-        email: "sponch",
+        email: "sponch@sponch.mail",
         password: "sponch1"
       }).then(function () {
         return _this4.props.history.push("/");
@@ -718,8 +718,9 @@ function (_React$Component) {
         type: "submit",
         value: this.props.formType
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.underSubmitButton()))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "spongeFive"
+        className: "sponge-five"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "sponge-five",
         src: window.spongeFiveUrl
       }))));
     }
