@@ -218,13 +218,15 @@ var Header = function Header(props) {
   var sessionLinks = function sessionLinks() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "login-signup-header"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "login-header"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/login",
-      className: "loginHeader"
-    }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-      to: "/signup",
-      className: "signupHeader"
-    }, "Sign up"));
+      to: "/login"
+    }, " Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "signup-header"
+    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+      to: "/signup"
+    }, "Sign up")));
   };
 
   var personalGreeting = function personalGreeting() {
@@ -349,10 +351,10 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "home-page",
-        onSubmit: this.handleSubmit
+        className: "home-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        className: "home-page-search"
+        className: "home-page-search",
+        onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "find-label"
       }, " Find", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -375,7 +377,10 @@ function (_React$Component) {
         className: "under-search"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "best-business"
-      }, "Find the Best Businessess in the Deep Blue Sea"))));
+      }, "Find the Best Businessess in the Deep Blue Sea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.krustyKrabUrl,
+        className: "krusty-krab"
+      }))));
     }
   }]);
 
@@ -636,7 +641,10 @@ function (_React$Component) {
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "kelpEntryForm"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.spongeFiveUrl,
+        className: "spongeFive"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "signup-form-box"
       }, this.aboveInputs(), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

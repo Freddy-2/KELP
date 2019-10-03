@@ -1,0 +1,20 @@
+ /* div for header when logged in */
+.logged-in-header{ 
+
+}
+/* button for logout when logged in */
+.header-logout-button{
+
+}
+ /* nav for header when not logged in */
+.login-signup-header{
+
+}
+/* login button when not logged in */
+.login-header{
+ 
+}
+/* signup button when not logged in */
+.signup-header{
+
+}
