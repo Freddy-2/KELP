@@ -386,8 +386,7 @@ function (_React$Component) {
         placeholder: "Bikini Bottom",
         onChange: this.update("near")
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "submit",
-        value: "Search"
+        type: "submit"
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "under-search"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
@@ -610,6 +609,7 @@ function (_React$Component) {
     value: function renderErrors() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.errors.map(function (error, i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "big-error-hours",
           key: "error-".concat(i)
         }, error);
       }));
@@ -625,13 +625,15 @@ function (_React$Component) {
           placeholder: "First Name",
           value: this.state.first_name,
           onChange: this.update('first_name'),
-          className: "signup-input"
+          className: "signup-input",
+          required: "required"
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "last_name",
           placeholder: "Last Name",
           value: this.state.last_name,
           onChange: this.update('last_name'),
-          className: "signup-input"
+          className: "signup-input",
+          required: "required"
         })));
       }
 
@@ -686,6 +688,7 @@ function (_React$Component) {
         }, "Sign up")), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "terms-and-condits"
         }, "By logging in, you agree to Kelp\u2019s Terms of Service and Privacy Policy."), "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          type: "button",
           onClick: this.demoButton
         }, "Demo User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "or-line"
@@ -713,10 +716,16 @@ function (_React$Component) {
         className: "kelp-logo-form-page"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "kelp-entry-form"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fixy-fix2"
+      }, this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fixy-fix3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fixy-fix"
+      }, this.aboveInputs(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "signup-form-box"
-      }, this.aboveInputs(), this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "signup-login-form"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.namesForSignUp()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "signup-login-input"
@@ -725,23 +734,25 @@ function (_React$Component) {
         placeholder: "Email",
         value: this.state.email,
         onChange: this.update('email'),
-        className: "email-input"
+        className: "email-input",
+        required: "required"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         placeholder: "Password",
         value: this.state.password,
         onChange: this.update('password'),
-        className: "password-input"
+        className: "password-input",
+        required: "required"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "session-submit",
         type: "submit",
         value: this.props.formType
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.underSubmitButton()))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.underSubmitButton())))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "sponge-five"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "sponge-five",
         src: window.spongeFiveUrl
-      }))));
+      }))))));
     }
   }]);
 

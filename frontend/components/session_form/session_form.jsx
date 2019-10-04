@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="big-error-hours" key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -54,6 +54,7 @@ class SessionForm extends React.Component {
           value={this.state.first_name}
           onChange={this.update('first_name')}
           className="signup-input"
+          required="required"
         />
       </label>
       <label>
@@ -62,6 +63,7 @@ class SessionForm extends React.Component {
           value={this.state.last_name}
           onChange={this.update('last_name')}
           className="signup-input"
+          required="required"
         />
       </label>
       </div>);
@@ -102,7 +104,7 @@ class SessionForm extends React.Component {
             <h2 className="signup-login-h2"> Log In to Kelp</h2> <br/>
             <p className="subhead"> New to Kelp? <Link to="/signup">Sign up</Link></p> <br/>
             <p className="terms-and-condits">By logging in, you agree to Kelp’s Terms of Service and Privacy Policy.</p>  <br/>
-          <button onClick={this.demoButton}>Demo User</button>
+            <button type="button" onClick={this.demoButton}>Demo User</button>
           <p className="or-line"><span className="or-span">OR</span></p>
           </div>
 
@@ -122,12 +124,19 @@ class SessionForm extends React.Component {
       <Link to="/" className="logo-link-form-page">
          <img src={window.kelpLogoUrl} className="kelp-logo-form-page" />
        </Link>
+       
        </header>
+       
       <div className="kelp-entry-form">
-
-        <form onSubmit={this.handleSubmit} className="signup-form-box">
+        <div className="fixy-fix2">
+      {this.renderErrors()}
+<div className="fixy-fix3">
+        <div className="fixy-fix">
+        
+        
         {this.aboveInputs()} 
-          {this.renderErrors()}
+        <form onSubmit={this.handleSubmit} className="signup-form-box">
+          
           <div className="signup-login-form">
            <div>{this.namesForSignUp()}</div> 
             <br />
@@ -137,7 +146,8 @@ class SessionForm extends React.Component {
                 placeholder="Email"
                 value={this.state.email}
                 onChange={this.update('email')}
-               className="email-input"
+                className="email-input"
+                required="required"
               />
             </label>
             <br />
@@ -146,7 +156,8 @@ class SessionForm extends React.Component {
                 placeholder="Password"
                 value={this.state.password}
                 onChange={this.update('password')}
-               className="password-input"
+                className="password-input"
+                required="required"
               />
             </label>
             </div>
@@ -154,9 +165,12 @@ class SessionForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.formType} />
             <div>{this.underSubmitButton()}</div>
           </div>         
-        </form>      
+        </form> 
+        </div>     
       <div className="sponge-five">
            <img className="sponge-five" src={window.spongeFiveUrl}/>
+      </div>
+      </div>
       </div>
       </div>
 
