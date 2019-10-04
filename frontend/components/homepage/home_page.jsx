@@ -53,7 +53,7 @@ class HomePage extends React.Component {
             <p className="krusty-krab-name">The Krusty Krab!</p>
             </div>
         </div>
-          <img src={window.krabbyPattyUrl} className="patty-krab" />
+          {/* <img src={window.krabbyPattyUrl} className="patty-krab" /> */}
       </div>
       </>
     )
