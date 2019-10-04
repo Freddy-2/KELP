@@ -76,6 +76,7 @@
     outline-width: 0;
     font-size: 18px;
     width: 375px;
+    border-right: groove;
 
 }
 /* div for the objects under search bar */
