@@ -215,14 +215,14 @@ var Header = function Header(props) {
   var sessionLinks = function sessionLinks() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "login-signup-header"
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "review"
-    }, "Write A Review")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "Write A Review"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "login-signup-buttons"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/login",
       className: "login-header"
-    }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    }, "Log In"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
       to: "/signup",
       className: "signup-header"
     }, "Sign up")));
@@ -392,10 +392,17 @@ function (_React$Component) {
         className: "under-search"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "best-business"
-      }, "Find the Best Businessess in the Deep Blue Sea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, "Find the Best Businessess in the Deep Blue Sea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "krusty-krab-div"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.krustyKrabUrl,
         className: "krusty-krab"
-      }))));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        className: "krusty-krab-name"
+      }, "The Krusty Krab!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.krabbyPattyUrl,
+        className: "patty-krab"
+      })));
     }
   }]);
 
@@ -662,7 +669,14 @@ function (_React$Component) {
           className: "subhead"
         }, " Connect with great local businesses "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "terms-and-condits"
-        }, " By continuing, you agree to Kelp\u2019s Terms of Service and acknowledge Kelp\u2019s Privacy Policy."));
+        }, " By continuing, you agree to Kelp\u2019s Terms of Service and acknowledge Kelp\u2019s Privacy Policy."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Redirect To ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: "/login",
+          className: "demo-redirect"
+        }, "Demo Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "or-line"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          className: "or-span"
+        }, "OR")));
       } else {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "up-top"
@@ -676,7 +690,11 @@ function (_React$Component) {
           className: "terms-and-condits"
         }, "By logging in, you agree to Kelp\u2019s Terms of Service and Privacy Policy."), "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: this.demoButton
-        }, "Demo User"));
+        }, "Demo User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "or-line"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+          className: "or-span"
+        }, "OR")));
       }
     }
   }, {
