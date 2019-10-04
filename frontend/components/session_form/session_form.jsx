@@ -92,6 +92,8 @@ class SessionForm extends React.Component {
         <h2 className="signup-login-h2">Sign Up for Kelp</h2> <br/>
        <p className="subhead"> Connect with great local businesses </p> <br/>
       <p className="terms-and-condits"> By continuing, you agree to Kelp’s Terms of Service and acknowledge Kelp’s Privacy Policy.</p>
+          <p>Redirect To <Link to="/login" className="demo-redirect">Demo Login</Link></p>
+          <p className="or-line"><span className="or-span">OR</span></p>
         </div>
       )
     } else{
@@ -101,6 +103,7 @@ class SessionForm extends React.Component {
             <p className="subhead"> New to Kelp? <Link to="/signup">Sign up</Link></p> <br/>
             <p className="terms-and-condits">By logging in, you agree to Kelp’s Terms of Service and Privacy Policy.</p>  <br/>
           <button onClick={this.demoButton}>Demo User</button>
+          <p className="or-line"><span className="or-span">OR</span></p>
           </div>
 
         )
