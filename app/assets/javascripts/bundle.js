@@ -399,10 +399,7 @@ function (_React$Component) {
         className: "krusty-krab"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "krusty-krab-name"
-      }, "The Krusty Krab!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: window.krabbyPattyUrl,
-        className: "patty-krab"
-      })));
+      }, "The Krusty Krab!")))));
     }
   }]);
 
