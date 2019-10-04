@@ -40,7 +40,7 @@ class HomePage extends React.Component {
             <label className="near-label"> Near
               <input className="near-search" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
             </label>
-                <input type="submit" />
+                <button className="search-button"><img className="search" src={window.searchUrl} /></button>
           </form>
             </div>
         </div>

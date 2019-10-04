@@ -11,7 +11,6 @@
     border-radius: 50%;
     height: 350px;
     width: 350px;
-    padding-left: 10px;
 
 }
 /* signup form */
@@ -70,11 +69,17 @@
 }
 /* this is what appears under the form */
 .under-submit-session{
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5em;
     color: turquoise;
     font-weight: normal;
     float: right;
+    padding-top: 10px;
+    text-decoration: none;
+}
+.under-submit-session a{
+
+    text-decoration: none;
 }
 /* logo link container */
 .kelp-logo-form-page{
@@ -82,8 +87,9 @@
   /* margin: 10px auto; */
   padding: 7px 0;
   /* height: 30px; */
-  width: 70px;
+  width: 100px;
   /* background-color: powderblue; */
+  padding-right: 30px;
 }
 /* logo link to homepage */
 .logo-link-form-page{
@@ -101,16 +107,16 @@
     font-weight: bold;
     margin-bottom: -5px;
     color: blue;
-    font-size: 22px;
+    font-size: 24px;
 }
 .subhead{
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .terms-and-condits{
     color: #333;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.2em;
     margin-bottom: 10px
 }
@@ -146,7 +152,9 @@
     /* margin: 20px; */
     /* flex-direction: column; */
     width: 275px;
-    padding-right: 100px;
+    padding-right: 200px;
+    padding-top: 45px;
+    padding-left: 10px;
 }
 .fixy-fix2{
 display: flex;
