@@ -1,3 +1,5 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 /* overall entry div */
 .kelp-entry-form{
     display: flex;
@@ -6,9 +8,10 @@
 }
 /* high fiving image */
 .sponge-five{
-  border-radius: 50%;
-  height: 250px;
-  width: 250px;
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    padding-left: 10px;
 
 }
 /* signup form */
@@ -29,6 +32,9 @@
   margin: 5px;
   width: 95%;
   border-radius: 2px;
+
+  
+
 }
 
 .password-input{
@@ -133,3 +139,34 @@
  color: blue;
  font-weight: bold;
 }
+
+.fixy-fix{
+    text-align: center;
+    /* display: flex; */
+    /* margin: 20px; */
+    /* flex-direction: column; */
+    width: 275px;
+    padding-right: 100px;
+}
+.fixy-fix2{
+display: flex;
+  flex-direction: column;
+}
+.fixy-fix3{
+display: flex;
+    flex-direction: row;
+}
+
+.big-error-hours {
+    margin: 10px 0px;
+    padding: 12px;
+    color: black;
+    background-color: #FFD2D2;
+    /* position: initial; */
+    /* top: 0; */
+    position: relative;
+    top: -100px;
+    padding: 20px;
+    width: 100%;
+}
+

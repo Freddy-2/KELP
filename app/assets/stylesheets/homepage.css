@@ -1,3 +1,4 @@
+/* @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
 /* overall home page */
 .home-page{
 
@@ -58,6 +59,7 @@
     border-radius: 4px;
     background: #fff;
     outline-width: 0;
+    width: 325px;
     
 
 }
@@ -69,6 +71,7 @@
     border-radius: 4px;
     background: #fff;
     outline-width: 0;
+    width: 325px;
 
 }
 /* div for the objects under search bar */
