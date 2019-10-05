@@ -15,7 +15,10 @@
 }
 /* search form for home page */
 .home-page-search{
-    text-align: center;
+  text-align: center;
+  /* display: inline-block;
+  position: absolute;
+  width:  100%; */
  /* padding: 40px; */
 }
 .logo-link{
@@ -63,7 +66,7 @@
     outline-width: 0;
     font-size: 18px;
     width: 375px;
-    
+
 
 }
 /* input field for find */
@@ -77,6 +80,9 @@
     font-size: 18px;
     width: 375px;
     border-right: groove;
+  display: inline-block;
+
+
 
 }
 /* div for the objects under search bar */
