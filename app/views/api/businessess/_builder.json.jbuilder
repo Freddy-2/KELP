@@ -1,0 +1,1 @@
+json.extract! business, :id, :title, :description, :longitude, :latitude, :price, :opening_hours, :closing_hours
