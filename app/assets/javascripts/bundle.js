@@ -322,7 +322,19 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Businesses: "), this.props.businesses.map(function (business) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+        className: "form-page-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/",
+        className: "logo-link-form-page"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.kelpLogoUrl,
+        className: "kelp-logo-form-page"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "businesses-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "business-label"
+      }, " Best Businesses near Bikini Bottom "), this.props.businesses.map(function (business) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_business_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           business: business,
           key: business.id
@@ -389,12 +401,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var BusinessIndexItem = function BusinessIndexItem(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "business"
+    className: "business-index-box"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: "business-pic",
     to: "/businesses/".concat(props.business.id)
   }, "PICTURE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    className: "business-title",
     to: "/businesses/".concat(props.business.id)
-  }, props.business.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "category"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.business.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.business.description));
+  }, props.business.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "business-category"
+  }, "category"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "business-address"
+  }, props.business.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "business-description"
+  }, props.business.description));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(BusinessIndexItem));

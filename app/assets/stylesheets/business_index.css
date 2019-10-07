@@ -1,0 +1,23 @@
+.businesses-box{
+
+}
+
+.business-label{
+
+}
+
+.form-page-header{
+    background-color: coral;
+    display: flex;
+    justify-content: center
+}
+
+.kelp-logo-form-page{
+  display: flex;
+  /* margin: 10px auto; */
+  padding: 7px 0;
+  /* height: 30px; */
+  width: 100px;
+  /* background-color: powderblue; */
+  padding-right: 30px;
+}
