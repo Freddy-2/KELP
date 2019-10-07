@@ -20,14 +20,24 @@ class BusinessIndex extends React.Component {
                     </Link>
 
                 </header>
-                <div className="businesses-box">
-                    <h1 className="business-label"> Best Businesses near Bikini Bottom </h1>
-                    {this.props.businesses.map(business => (
-                        <BusinessIndexItem
-                            business={business}
-                            key={business.id}
-                        />
-                    ))}
+                
+                <div className="biggest-biz-box">
+                <h1 className="business-label"> Best Businesses near Bikini Bottom </h1>
+                
+                    <div className="bigger-biz-box">
+                        <div className="businesses-box">
+                            <h2 className="all-results"> All Results:</h2>
+                            {this.props.businesses.map(business => (
+                                <BusinessIndexItem 
+                                    business={business}
+                                    key={business.id}
+                                />
+                            ))}
+                        </div>
+                        <div className="business-map">
+                            MAP
+                        </div>
+                    </div>
                 </div>
             </>
         )

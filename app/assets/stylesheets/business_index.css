@@ -3,6 +3,29 @@
 }
 
 .business-label{
+    padding-left: 200px;
+    color: #333333;
+    font-family: sans-serif;
+    font-size: 18px;
+    border-bottom: solid;
+    border-style: inset;
+    border-bottom-width: thin;
+    padding-bottom: 20px;
+    padding-top: 25px;
+
+}
+.business-map{
+    padding-top: 29px;
+}
+
+.bigger-biz-box{
+display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 15px;
+}
+
+.biggest-biz-box{
 
 }
 
@@ -20,4 +43,8 @@
   width: 100px;
   /* background-color: powderblue; */
   padding-right: 30px;
+}
+
+.all-results{
+
 }

@@ -1,5 +1,14 @@
 .business-index-box{
-
+    padding-top: 20px;
+    border-top: solid;
+    border-style: ridge;
+    border-top-width: thin;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    font-family: sans-serif;
 }
 
 .business-pic{
@@ -7,17 +16,45 @@
 }
 
 .business-title{
-
+    color: #0073bb;
+    padding-bottom: 10px;
 }
 
 .business-category{
-
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 50px;
 }
 
 .business-address{
-
+    color: #333333;
+    font-size: 14px;
+    padding-bottom: 7px;
 }
 
 .business-description{
+color: #333333;
+    font-size: 18px;
+}
+.placeholder-pic{
+    width: 191px;
+    height: 177px;
+    border-radius: 4px;
 
+}
+
+.box2{
+padding-right: 161px;
+    display: flex;
+    flex-direction: column;
+}
+
+.business-rating{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.addy-div{
+  display: flex;
+  flex-direction: column;
 }
