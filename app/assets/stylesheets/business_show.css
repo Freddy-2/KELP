@@ -1,0 +1,122 @@
+.form-page-header{
+    background-color: coral;
+    display: flex;
+    justify-content: center
+}
+
+.kelp-logo-form-page{
+  display: flex;
+  /* margin: 10px auto; */
+  padding: 7px 0;
+  /* height: 30px; */
+  width: 100px;
+  /* background-color: powderblue; */
+  padding-right: 30px;
+}
+
+.business-title-show{
+  color: #333333;
+  font-size: 30px;
+  padding-bottom: 7px;
+  font-weight: bold;
+}
+
+.business-category-show{
+    color: blue;
+    font-size: 14px;
+    margin-bottom: 40px;
+    border-bottom: solid;
+    border-bottom-style: groove;
+    border-bottom-width: thin;
+    padding-bottom: 15px;
+}
+
+.business-rating-show{
+
+}
+
+.show-page{
+display: flex;
+justify-content: center;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title-area{
+
+}
+
+.show-map{
+
+}
+
+.biz-hours{
+  font-weight: bold;
+}
+
+.business-description-show{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: solid;
+    border-bottom-style: groove;
+    border-bottom-width: thin;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    margin-bottom: 40px;
+}
+
+.each-review{
+
+}
+
+.show-reviews{
+
+}
+
+.show-addy{
+
+}
+
+.show-left{
+  width: 500px;
+  margin-right: 50px;
+}
+
+.show-right{
+  
+}
+
+.business-photos{
+      display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+
+}
+
+.map-and-hours{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid;
+    border-bottom-style: groove;
+    border-bottom-width: thin;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    margin-bottom: 40px;
+}
+
+.label-map{
+color: #333333;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.label-description{
+color: #333333;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.show-description{
+
+}

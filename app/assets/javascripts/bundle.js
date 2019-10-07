@@ -496,7 +496,53 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.props.business.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+        className: "form-page-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/",
+        className: "logo-link-form-page"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: window.kelpLogoUrl,
+        className: "kelp-logo-form-page"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "business-photos"
+      }, this.props.business.title, " PHOTOS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-page"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-left"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "title-area"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "business-title-show"
+      }, this.props.business.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "business-rating-show"
+      }, "RATING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "business-category-show"
+      }, "category")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "label-map"
+      }, "Location & Hours"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "map-and-hours"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-map"
+      }, "MAP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "biz-hours"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Mon ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Tue ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Wed ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Thu ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Fri ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Sat ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Sun ", this.props.business.opening_hours, " - ", this.props.business.closing_hours))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "label-description"
+      }, "About The Business"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "business-description-show"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-description"
+      }, " ", this.props.business.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-reviews"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "each-review"
+      }, "REVIEW"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-right"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-addy"
+      }, this.props.business.address, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-addy"
+      }, "Bikini Bottom"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
