@@ -6,7 +6,7 @@
     margin-top: 15px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 600px;
     font-family: sans-serif;
 }
@@ -47,6 +47,7 @@ color: #333333;
 padding-right: 161px;
     display: flex;
     flex-direction: column;
+    padding-left: 50px;
 }
 
 .business-rating{

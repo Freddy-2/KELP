@@ -18,4 +18,6 @@
 class Business < ApplicationRecord
   validates :title, :description, :longitude, :latitude, :address, :price, :opening_hours, :closing_hours, presence: true
   validates :price, inclusion: { in: (1..3) }
+
+  has_one_attached :photo
 end
