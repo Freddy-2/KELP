@@ -331,15 +331,23 @@ function (_React$Component) {
         src: window.kelpLogoUrl,
         className: "kelp-logo-form-page"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "businesses-box"
+        className: "biggest-biz-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "business-label"
-      }, " Best Businesses near Bikini Bottom "), this.props.businesses.map(function (business) {
+      }, " Best Businesses near Bikini Bottom "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "bigger-biz-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "businesses-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "all-results"
+      }, " All Results:"), this.props.businesses.map(function (business) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_business_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           business: business,
           key: business.id
         });
-      })));
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "business-map"
+      }, "MAP"))));
     }
   }]);
 
@@ -405,16 +413,27 @@ var BusinessIndexItem = function BusinessIndexItem(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "business-pic",
     to: "/businesses/".concat(props.business.id)
-  }, "PICTURE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "placeholder-pic",
+    src: window.placeholderUrl
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "box2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "business-title",
     to: "/businesses/".concat(props.business.id)
   }, props.business.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "business-rating"
+  }, "RATING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "business-category"
   }, "category"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "business-description"
+  }, props.business.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "addy-div"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "business-address"
   }, props.business.address), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "business-description"
-  }, props.business.description));
+    className: "business-address"
+  }, "Bikini Bottom")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(BusinessIndexItem));

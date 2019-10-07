@@ -1,1 +1,1 @@
-json.extract! business, :id, :title, :description, :longitude, :latitude, :price, :opening_hours, :closing_hours
+json.extract! business, :id, :title, :description, :address ,:longitude, :latitude, :price, :opening_hours, :closing_hours
