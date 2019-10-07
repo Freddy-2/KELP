@@ -36,12 +36,17 @@ class SessionForm extends React.Component {
     return (
       <ul>
         {this.props.errors.map((error, i) => (
-          <li className="big-error-hours" key={`error-${i}`}>
+          <li className="big-error-hours" key={`error-${i}`}>   
+              <button className="error-button-time" onClick={this.props.clearErrors}>X</button>
             {error}
           </li>
         ))}
       </ul>
     );
+  }
+
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   namesForSignUp(){
@@ -75,13 +80,13 @@ class SessionForm extends React.Component {
     if (this.props.formType === "Sign Up") {
       return (
         <div className="under-submit-session">
-          Already on Kelp? <Link to="/login">Login</Link>
+          Already on Kelp? {this.props.nav}
         </div>
       );
     } else {
       return (
         <div className="under-submit-session">
-          New to Kelp? <Link to="/signup">Sign up</Link>
+          New to Kelp? {this.props.nav}
         </div>
       );
     }
