@@ -142,7 +142,14 @@
 } */
 
 .search-button{
-    padding-bottom: 14px;
-    padding-top: 6px;
+padding-bottom: 13px;
+    padding-top: 17px;
     margin-left: 5px;
+    background: red;
+    padding-right: 31px;
+    border-radius: 4px;
+}
+
+.search{
+
 }

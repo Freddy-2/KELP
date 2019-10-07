@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../footer/footer';
 
 
 class BusinessShow extends React.Component {
@@ -13,9 +14,12 @@ class BusinessShow extends React.Component {
 
     render() {
         return (
+            <>
             <div>
                 {this.props.business.title}
             </div>
+            <Footer />
+            </>
         );
     }
 }

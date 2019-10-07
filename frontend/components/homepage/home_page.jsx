@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderContainer from '../header/header_container'
-import Header from '../header/header';
+import Footer from '../footer/footer';
 import {Link} from 'react-router-dom';
 
 class HomePage extends React.Component {
@@ -23,6 +23,7 @@ class HomePage extends React.Component {
     });
   }
 
+
   render() {
     return (
       <>
@@ -40,7 +41,7 @@ class HomePage extends React.Component {
             <label className="near-label"> Near
               <input className="near-search" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
             </label>
-                <button className="search-button"><img className="search" src={window.searchUrl} /></button>
+                <Link to="/businesses" className="search-button"><img className="search" src={window.searchUrl} /></Link>
           </form>
             </div>
         </div>
@@ -53,7 +54,7 @@ class HomePage extends React.Component {
             <p className="krusty-krab-name">The Krusty Krab!</p>
             </div>
         </div>
-          {/* <img src={window.krabbyPattyUrl} className="patty-krab" /> */}
+          <Footer />
       </div>
       </>
     )

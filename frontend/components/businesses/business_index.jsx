@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import header from "../header/header";
 import BusinessIndexItem from "./business_index_item";
+import Footer from '../footer/footer';
 class BusinessIndex extends React.Component {
     constructor(props) {
         super(props)
@@ -22,9 +23,10 @@ class BusinessIndex extends React.Component {
                 </header>
                 
                 <div className="biggest-biz-box">
-                <h1 className="business-label"> Best Businesses near Bikini Bottom </h1>
                 
+                <h1 className="business-label"> Best Businesses near Bikini Bottom </h1>
                     <div className="bigger-biz-box">
+                        
                         <div className="businesses-box">
                             <h2 className="all-results"> All Results:</h2>
                             {this.props.businesses.map(business => (
@@ -39,6 +41,7 @@ class BusinessIndex extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </>
         )
     }
