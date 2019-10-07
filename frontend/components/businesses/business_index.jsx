@@ -14,8 +14,14 @@ class BusinessIndex extends React.Component {
     render() {
         return (
             <>
-                <div>
-                    <h1>Businesses: </h1>
+                <header className="form-page-header">
+                    <Link to="/" className="logo-link-form-page">
+                        <img src={window.kelpLogoUrl} className="kelp-logo-form-page" />
+                    </Link>
+
+                </header>
+                <div className="businesses-box">
+                    <h1 className="business-label"> Best Businesses near Bikini Bottom </h1>
                     {this.props.businesses.map(business => (
                         <BusinessIndexItem
                             business={business}
