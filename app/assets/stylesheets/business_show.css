@@ -120,3 +120,13 @@ color: #333333;
 .show-description{
 
 }
+
+.show-page-pics{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 25px;
+}
+
+.show-page-pic{
+  width: 25%;
+}

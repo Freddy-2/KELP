@@ -5,9 +5,10 @@ import { Link, withRouter } from 'react-router-dom';
 
 
 const BusinessIndexItem = (props) => {
+    // debugger
     return <div className="business-index-box">
         
-        <Link className="business-pic" to={`/businesses/${props.business.id}`}><img className="placeholder-pic" src={window.placeholderUrl} /></Link>
+        <Link className="business-pic" to={`/businesses/${props.business.id}`}><img className="placeholder-pic" src={props.business.photoUrls[0]} /></Link>
         <div className="box2">
             <Link className="business-title" to={`/businesses/${props.business.id}`}>{props.business.title}</Link>
             <p className="business-rating" >RATING</p>

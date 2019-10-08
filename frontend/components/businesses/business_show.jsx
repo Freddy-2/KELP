@@ -46,7 +46,12 @@ class BusinessShow extends React.Component {
                         </form>
                     </div>
                 </header>
-            <div className="business-photos">{this.props.business.title} PHOTOS</div>
+                <div className="show-page-pics">
+                <img className="show-page-pic" src={this.props.business.photoUrls[0]} />
+                <img className="show-page-pic" src={this.props.business.photoUrls[1]} />
+                <img className="show-page-pic" src={this.props.business.photoUrls[2]} />
+                <img className="show-page-pic" src={this.props.business.photoUrls[3]} />
+                </div>
             <div className="show-page">
                 
              <div className="show-left">

@@ -14,6 +14,7 @@ const msp = (state, ownProps) => {
         price: 0,
         opening_hours: "",
         closing_hours: "",
+        photoUrls: [],
         }
     }
 }
