@@ -20,16 +20,16 @@ krusty_krab = Business.create(
  closing_hours: "10 pm"
 )
 
-krusty_krab1 = File.open('/Users/aa/Desktop/KELP/app/assets/images/krustyKrab.png')
+krusty_krab1 = File.open(Rails.root.join('app', 'assets', 'images', 'krustyKrab.png'))
 krusty_krab.photos.attach(io: krusty_krab1, filename: 'krustyKrab.png')
 
-krusty_krab2 = File.open('/Users/aa/Desktop/KELP/app/assets/images/krustyKrab2.png')
+krusty_krab2 = File.open(Rails.root.join('app', 'assets', 'images', 'krustyKrab2.png'))
 krusty_krab.photos.attach(io: krusty_krab2, filename: 'krustyKrab2.png')
 
-krusty_krab3 = File.open('/Users/aa/Desktop/KELP/app/assets/images/krustyKrab3.png')
+krusty_krab3 = File.open(Rails.root.join('app', 'assets', 'images', 'krustyKrab3.png'))
 krusty_krab.photos.attach(io: krusty_krab3, filename: 'krustyKrab3.png')
 
-krusty_krab4 = File.open('/Users/aa/Desktop/KELP/app/assets/images/krustyKrab4.png')
+krusty_krab4 = File.open(Rails.root.join('app', 'assets', 'images', 'krustyKrab4.png'))
 krusty_krab.photos.attach(io: krusty_krab4, filename: 'krustyKrab4.png')
 
 chum_bucket = Business.create(
@@ -43,16 +43,16 @@ chum_bucket = Business.create(
  closing_hours: "10 pm"
 )
 
-chum_bucket1 = File.open('/Users/aa/Desktop/KELP/app/assets/images/chumBucket.png')
+chum_bucket1 = File.open(Rails.root.join('app', 'assets', 'images', 'chumBucket.png'))
 chum_bucket.photos.attach(io: chum_bucket1, filename: 'chumBucket.png')
 
-chum_bucket2 = File.open('/Users/aa/Desktop/KELP/app/assets/images/chumBucket2.png')
+chum_bucket2 = File.open(Rails.root.join('app', 'assets', 'images', 'chumBucket2.png'))
 chum_bucket.photos.attach(io: chum_bucket2, filename: 'chumBucket2.png')
 
-chum_bucket3 = File.open('/Users/aa/Desktop/KELP/app/assets/images/chumBucket3.png')
+chum_bucket3 = File.open(Rails.root.join('app', 'assets', 'images', 'chumBucket3.png'))
 chum_bucket.photos.attach(io: chum_bucket3, filename: 'chumBucket3.png')
 
-chum_bucket4 = File.open('/Users/aa/Desktop/KELP/app/assets/images/chumBucket4.png')
+chum_bucket4 = File.open(Rails.root.join('app', 'assets', 'images', 'chumBucket4.png'))
 chum_bucket.photos.attach(io: chum_bucket4, filename: 'chumBucket4.png')
 
 
@@ -69,15 +69,15 @@ tree_dome = Business.create(
  closing_hours: "10 pm"
 )
 
-tree_dome1 = File.open('/Users/aa/Desktop/KELP/app/assets/images/treeDome.png')
+tree_dome1 = File.open(Rails.root.join('app', 'assets', 'images', 'treeDome.png'))
 tree_dome.photos.attach(io: tree_dome1, filename: 'treeDome.png')
 
-tree_dome2 = File.open('/Users/aa/Desktop/KELP/app/assets/images/treeDome2.png')
+tree_dome2 = File.open(Rails.root.join('app', 'assets', 'images', 'treeDome2.png'))
 tree_dome.photos.attach(io: tree_dome2, filename: 'treeDome2.png')
 
-tree_dome3 = File.open('/Users/aa/Desktop/KELP/app/assets/images/treeDome3.png')
+tree_dome3 = File.open(Rails.root.join('app', 'assets', 'images', 'treeDome3.png'))
 tree_dome.photos.attach(io: tree_dome3, filename: 'treeDome3.png')
 
-tree_dome4 = File.open('/Users/aa/Desktop/KELP/app/assets/images/treeDome4.png')
+tree_dome4 = File.open(Rails.root.join('app', 'assets', 'images', 'treeDome4.png'))
 tree_dome.photos.attach(io: tree_dome4, filename: 'treeDome4.png')
 
