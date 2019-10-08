@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :businesses, only: [:index, :show]    
     resources :users, only: [:create]
     resource :session, only: [:create, :destroy]
+    resources :reviews
   end
 
 
