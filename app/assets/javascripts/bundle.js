@@ -460,6 +460,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var BusinessIndexItem = function BusinessIndexItem(props) {
+  // debugger
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "business-index-box"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -467,7 +468,7 @@ var BusinessIndexItem = function BusinessIndexItem(props) {
     to: "/businesses/".concat(props.business.id)
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "placeholder-pic",
-    src: window.placeholderUrl
+    src: props.business.photoUrls[0]
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "box2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -605,8 +606,20 @@ function (_React$Component) {
         className: "biz-search",
         src: window.searchUrl
       }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "business-photos"
-      }, this.props.business.title, " PHOTOS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "show-page-pics"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "show-page-pic",
+        src: this.props.business.photoUrls[0]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "show-page-pic",
+        src: this.props.business.photoUrls[1]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "show-page-pic",
+        src: this.props.business.photoUrls[2]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "show-page-pic",
+        src: this.props.business.photoUrls[3]
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-left"
@@ -679,7 +692,8 @@ var msp = function msp(state, ownProps) {
       address: "",
       price: 0,
       opening_hours: "",
-      closing_hours: ""
+      closing_hours: "",
+      photoUrls: []
     }
   };
 };

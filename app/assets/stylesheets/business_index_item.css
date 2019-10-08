@@ -34,7 +34,9 @@
 
 .business-description{
 color: #333333;
-    font-size: 18px;
+    font-size: 14px;
+        width: 230%;
+        
 }
 .placeholder-pic{
     width: 191px;
