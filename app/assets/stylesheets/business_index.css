@@ -48,3 +48,83 @@ display: flex;
 .all-results{
 
 }
+
+.index-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 12px;
+}
+
+.logo-link-biz-page{
+
+}
+
+.kelp-logo-biz-page{
+height: 35px;
+padding-right: 22px;
+}
+
+.biz-search{
+margin-top: -3px;
+}
+
+.biz-near-label{
+/* padding: 11px; */
+    box-shadow: none;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    margin: -5px;
+    color: #666666;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px;
+    border-left: solid
+}
+
+.biz-find-label{
+    /* padding: 11px; */
+    box-shadow: none;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    margin: -5px;
+    color: #666666;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px;
+
+}
+
+.biz-find-search{
+    box-shadow: none;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    outline-width: 0;
+    font-size: 18px;
+    width: 300px;
+}
+
+.biz-near-search{
+    box-shadow: none;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    outline-width: 0;
+    font-size: 18px;
+    width: 300px;
+}
+
+.biz-search-button{
+    padding-bottom: 8px;
+    padding-top: 12px;
+    margin-left: 5px;
+    background: red;
+    padding-right: 15px;
+    border-radius: 4px;
+
+}
+

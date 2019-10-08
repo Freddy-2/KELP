@@ -6,19 +6,45 @@ import Footer from '../footer/footer';
 class BusinessShow extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            find: "",
+            near: ""
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount(){
        this.props.fetchBusiness(this.props.match.params.id);
     }
 
+    update(field) {
+        return e => this.setState({
+            [field]: e.target.value
+        });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+    }
+
     render() {
         return (
             <>
                 <header className="form-page-header">
-                    <Link to="/" className="logo-link-form-page">
-                        <img src={window.kelpLogoUrl} className="kelp-logo-form-page" />
-                    </Link>
+                    <div className="index-header">
+                        <Link to="/" className="logo-link-biz-page">
+                            <img src={window.kelpLogoUrl} className="kelp-logo-biz-page" />
+                        </Link>
+                        <form className="biz-search" onSubmit={this.handleSubmit}>
+                            <label className="biz-find-label"> Find
+              <input className="biz-find-search" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
+                            </label>
+                            <label className="biz-near-label"> Near
+              <input className="biz-near-search" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
+                            </label>
+                            <Link to="/businesses" className="biz-search-button"><img className="biz-search" src={window.searchUrl} /></Link>
+                        </form>
+                    </div>
                 </header>
             <div className="business-photos">{this.props.business.title} PHOTOS</div>
             <div className="show-page">
