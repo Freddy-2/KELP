@@ -52,7 +52,6 @@ class BusinessShow extends React.Component {
                 <img className="show-page-pic" src={this.props.business.photoUrls[2]} />
                 <img className="show-page-pic" src={this.props.business.photoUrls[3]} />
                 </div>
-                {/* d */}
             <div className="show-page">
                 
              <div className="show-left">
