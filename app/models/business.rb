@@ -20,5 +20,6 @@ class Business < ApplicationRecord
   validates :price, inclusion: { in: (1..3) }
 
   # has_one_attached :biz_photo
+  has_many :reviews
   has_many_attached :photos
 end

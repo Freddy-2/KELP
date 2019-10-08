@@ -1,0 +1,1 @@
+json.extract! business, :id, :body, :rating, :user_id, :business_id
