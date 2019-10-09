@@ -90,18 +90,19 @@
 
 /* input field for find */
 .find-search{
-    padding: 11px;
+    padding: 6px;
     padding-right: 44px;
+    padding-left: 12px;
     box-shadow: none;
     border: none;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     background: #fff;
     outline-width: 0;
     font-size: 14px;
     width: 375px;
-    border-right: groove;
-  display: inline-block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-right: 1px solid lightgray;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
 
