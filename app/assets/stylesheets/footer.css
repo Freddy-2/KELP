@@ -1,11 +1,12 @@
 .footer-img{
     height: 200px;
-    width: 500px;
+    width: 530px;
 }
 
 .github-link{
       color: #d32323;
     font-weight: bold;
+    text-decoration: none;
 
 }
 
@@ -13,19 +14,27 @@
     color: #d32323;
     font-weight: bold;
     margin-right: 265px;
+    text-decoration: none;
+}
+
+.linkedin-link:hover{
+    border-bottom: solid;
+}
+.github-link:hover{
+    border-bottom: solid;
 }
 
 .page-bottom{
 display: flex;
     flex-direction: column;
-    border-top: solid;
-    border-top-style: outset;
-    border-width: thin;
+    border-top: 1px solid #ccc;
     align-items: center;
     margin-top: 20px;
+    background-color: #f5f5f5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .links{
 margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }

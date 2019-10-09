@@ -107,16 +107,16 @@
     font-weight: bold;
     margin-bottom: -5px;
     color: blue;
-    font-size: 24px;
+    font-size: 22px;
 }
 .subhead{
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .terms-and-condits{
     color: #333;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.2em;
     margin-bottom: 10px
 }
@@ -155,6 +155,7 @@
     padding-right: 200px;
     padding-top: 45px;
     padding-left: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .fixy-fix2{
 display: flex;
@@ -180,7 +181,7 @@ display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    font-family: sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
 }
 
@@ -190,6 +191,6 @@ display: flex;
     border: none;
     color: #666666;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }

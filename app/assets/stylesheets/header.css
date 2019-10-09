@@ -4,8 +4,9 @@
     justify-content: space-between;
     margin: 0 auto;
     width: 936px;
-    padding: 30px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 32px;
+    align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* button for logout when logged in */
 .header-logout-button{
@@ -29,9 +30,9 @@
     justify-content: space-between;
     margin: 0 auto;
     width: 936px;
-    padding: 30px;
+    padding: 32px;
     align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* border-left: 1px solid #ccc;
   border-right: 1px solid #ccc; */
 }
@@ -39,6 +40,7 @@
 .login-signup-buttons{
    display: flex;
    justify-content: space-between;
+   font-size: 14px;
 }
 /* login button when not logged in */
 .login-header{
@@ -64,12 +66,13 @@
     border-radius: 4px;
     border: 2px solid #fff;
     margin-top: -2px;
-    padding: 8px 23px 8px;
+    padding: 9px 24px 9px;
     color: #fff;
     align-items: baseline;
     text-decoration: none;
     transition: 0s background-color;
     font-weight: bold;
+    margin-right: -12px;
 }
 .signup-header:hover{
   background-color: #fff;
@@ -88,4 +91,53 @@
   color: white;
   font-weight: bold;
   font-size: 24px;
+}
+
+.header-links{
+
+}
+
+.header-linkedin-link{
+
+        color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.header-github-link{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 22px;
+    margin-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+.left-side-header{
+ display: flex;
+ flex-direction: row;
+ font-size: 14px;
+}
+
+.header-github-link:hover{
+  border-bottom: solid;
+}
+.header-linkedin-link:hover{
+  border-bottom: solid;
+}
+
+.find-input-box{
+
+}
+
+
+.near-input-box{
+
 }
