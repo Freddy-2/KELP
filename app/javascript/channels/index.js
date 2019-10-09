@@ -3,3 +3,4 @@
 
 const channels = require.context('.', true, /_channel\.js$/)
 channels.keys().forEach(channels)
+import "font-awesome/css/font-awesome.min.css";

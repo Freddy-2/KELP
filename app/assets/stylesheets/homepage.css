@@ -15,11 +15,15 @@
 }
 /* search form for home page */
 .home-page-search{
-  text-align: center;
+  /* text-align: center; */
   /* display: inline-block;
   position: absolute;
   width:  100%; */
  /* padding: 40px; */
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+        align-items: center;
 }
 .logo-link{
     text-align: center;
@@ -36,12 +40,13 @@
     padding: 11px;
     box-shadow: none;
     border: none;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     background: #fff;
     margin: -5px;
     color: #666666;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 /* label for find input */
@@ -53,8 +58,9 @@
     background: #fff;
     margin: -5px;
     color: #666666;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* input field for near */
 .near-search{
@@ -64,23 +70,38 @@
     border-radius: 4px;
     background: #fff;
     outline-width: 0;
-    font-size: 18px;
-    width: 375px;
-
-
+    font-size: 14px;
+    width: 330px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.near-search::placeholder{
+    color: #333333;
+    font-size: 18px;
+    /* font-weight: bold; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.find-search::placeholder{
+    /* color: black; */
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 /* input field for find */
 .find-search{
     padding: 11px;
+    padding-right: 44px;
     box-shadow: none;
     border: none;
     border-radius: 4px;
     background: #fff;
     outline-width: 0;
-    font-size: 18px;
+    font-size: 14px;
     width: 375px;
     border-right: groove;
   display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
 
@@ -90,6 +111,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* label for best business text */
 .best-business{
@@ -99,12 +121,14 @@
     color: #d32323;
     padding: 10px;
     padding-top: 30px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 /* image for krustyKrab */
 .krusty-krab{
     border: solid;
     border-style: groove;
     border-radius: 4px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 
@@ -113,7 +137,7 @@
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    padding-top: 50px;
+    padding-top: 35px;
 }
 
 .find-div{
@@ -124,6 +148,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     
 }
 .krusty-krab-name{
@@ -135,6 +160,7 @@
     border: solid;
     border-style: groove;
     border-radius: 1px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 }
 /* .patty-krab{
@@ -142,14 +168,99 @@
 } */
 
 .search-button{
-padding-bottom: 13px;
+padding-bottom: 29px; 
+    /* padding-top: 27px; */
+    margin-left: 5px;
+    background: crimson;
+    /* padding-right: 31px; */
+    border-radius: 4px;
+    padding: 11px;
+    padding-top: 16px;
+    padding-right: 25px;
+    padding-left: 24px;
+    color: white;
+}
+
+.search{
+    width: 20px;
+    height: 20px;
+}
+.search-and-button{
+
+}
+
+.home-page-links{
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.home-github-link{
+    color: #fff;
+    text-decoration: none;
+}
+
+.home-linkedin-link{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+.home-linkedin-link:hover{
+  border-bottom: solid;
+}
+
+.home-github-link:hover{
+  border-bottom: solid;
+}
+.search-button3{
+    /* padding-bottom: 13px;
     padding-top: 17px;
     margin-left: 5px;
     background: red;
     padding-right: 31px;
-    border-radius: 4px;
+    border-radius: 4px; */
 }
 
-.search{
+.fa-search{
 
+}
+
+.linkedin-logo{
+ padding-right: 5px;
+ color: white;
+ text-decoration: none;
+}
+
+.github-logo{
+ padding-right: 5px;
+  color: white;
+ text-decoration: none;
+}
+
+.logo-credit{
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: flex;
+    flex-direction: column;
+    margin-top: 175px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.home-logomaker-link{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+       margin-top: 5px
+}
+
+.home-logomaker-link:hover{
+  border-bottom: solid;
 }
