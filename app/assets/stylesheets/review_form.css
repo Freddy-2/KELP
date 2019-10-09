@@ -1,0 +1,25 @@
+.review-form{
+display: flex;
+justify-content: center;
+}
+
+.review-form-box{
+
+}
+
+.review-text-body{
+    resize: none;
+    min-height: 258px;
+}
+
+.review-submit{
+    width: 100%;
+    cursor: pointer;    
+    padding: 7px;
+    font-size: 16px;
+    color: #fff;
+    background: blue;
+    border: 1px solid blue;
+    border-radius: 4px;
+    font-weight: bold;
+}

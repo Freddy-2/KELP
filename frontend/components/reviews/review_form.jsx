@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../footer/footer';
+// import Footer from '../footer/footer';
 import { Link, Redirect } from 'react-router-dom';
 
 class ReviewForm extends React.Component {
@@ -20,7 +20,7 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm(this.state).then(() => this.props.history.push("/"));
+    this.props.processReview(this.state).then(() => this.props.history.push("/"));
   }
 
 
@@ -38,9 +38,9 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    if (!this.props.user) {
-      <Redirect to="/login" />;
-    }
+    // if (!this.props.user) {
+    //   <Redirect to="/login" />;
+    // }
     return (
       <>
         <header className="form-page-header">
@@ -49,54 +49,17 @@ class ReviewForm extends React.Component {
           </Link>
         </header>
 
-        {/* <div className="kelp-entry-form">
-          <div className="fixy-fix2">
+        <div className="review-form">
             {this.renderErrors()}
-            <div className="fixy-fix3">
-              <div className="fixy-fix">
+
+            <form onSubmit={this.handleSubmit} className="review-form-box">
+              <div>RATING</div>
+              <textarea className="review-text-body" cols="30" rows="10"></textarea>
+            <input className="review-submit" type="submit" value="Post Review" />
+            </form>
 
 
-                {this.aboveInputs()}
-                <form onSubmit={this.handleSubmit} className="signup-form-box">
-
-                  <div className="signup-login-form">
-                    <div>{this.namesForSignUp()}</div>
-                    <br />
-                    <div className="signup-login-input">
-                      <label>
-                        <input type="email"
-                          placeholder="Email"
-                          value={this.state.email}
-                          onChange={this.update('email')}
-                          className="email-input"
-                          required="required"
-                        />
-                      </label>
-                      <br />
-                      <label>
-                        <input type="password"
-                          placeholder="Password"
-                          value={this.state.password}
-                          onChange={this.update('password')}
-                          className="password-input"
-                          required="required"
-                        />
-                      </label>
-                    </div>
-                    <br />
-                    <input className="session-submit" type="submit" value={this.props.formType} />
-                    <div>{this.underSubmitButton()}</div>
-                  </div>
-                </form>
-              </div>
-              <div className="sponge-five">
-                <img className="sponge-five" src={window.spongeFiveUrl} />
-              </div>
-            </div>
-          </div>
-
-        </div> */}
-        <Footer />
+        </div>
       </>
     );
   }
