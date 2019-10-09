@@ -79,13 +79,18 @@
   color: gray;
    transition-delay:.2s;
 }
-.review{
-  color: white;
-  font-weight: bold;
+.review-header{
+     color: white;
+    font-weight: bold;
+    text-decoration: none;
+    /* padding-bottom: 5px; */
 }
-/* .login-header :hover{
-  background-color: #fff;
-} */
+
+.review-header:hover{
+   border-bottom: solid;
+   padding-bottom: 5px;
+}
+
 
 .header-name{
   color: white;

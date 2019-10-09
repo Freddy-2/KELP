@@ -121,9 +121,9 @@ class SessionForm extends React.Component {
 
 
   render() {
-    if (this.props.user) {
-      <Redirect to="/" />;
-    }
+    // if (this.props.user) {
+    //   <Redirect to="/" />;
+    // }
    return (  
      <>    
       <header className="form-page-header">
