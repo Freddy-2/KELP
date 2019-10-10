@@ -309,6 +309,37 @@ var clearErrors = function clearErrors() {
 
 /***/ }),
 
+/***/ "./frontend/actions/user_actions.js":
+/*!******************************************!*\
+  !*** ./frontend/actions/user_actions.js ***!
+  \******************************************/
+/*! exports provided: RECEIVE_USERS, receiveUsers, fetchUsers */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_USERS", function() { return RECEIVE_USERS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveUsers", function() { return receiveUsers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUsers", function() { return fetchUsers; });
+/* harmony import */ var _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/user_api_util */ "./frontend/util/user_api_util.js");
+
+var RECEIVE_USERS = "RECEIVE_USERS";
+var receiveUsers = function receiveUsers(users) {
+  return {
+    type: RECEIVE_USERS,
+    users: users
+  };
+};
+var fetchUsers = function fetchUsers() {
+  return function (dispatch) {
+    return _util_user_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchUsers"]().then(function (users) {
+      return dispatch(receiveUsers(users));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/components/App.jsx":
 /*!*************************************!*\
   !*** ./frontend/components/App.jsx ***!
@@ -612,6 +643,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _footer_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../footer/footer */ "./frontend/components/footer/footer.jsx");
+/* harmony import */ var _reviews_review_list_item__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reviews/review_list_item */ "./frontend/components/reviews/review_list_item.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -631,6 +663,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -658,8 +691,10 @@ function (_React$Component) {
   _createClass(BusinessShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchBusiness(this.props.match.params.id);
-      this.props.fetchReviews();
+      // debugger
+      this.props.fetchBusiness(this.props.match.params.id); //    debugger
+
+      this.props.fetchUsers();
     }
   }, {
     key: "update",
@@ -678,6 +713,13 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this3 = this;
+
+      // debugger
+      // let revIds = this.props.reviews.map(review => {
+      //     return review.user_id;
+      // });
+      // debugger
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
         className: "form-page-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -754,7 +796,14 @@ function (_React$Component) {
         className: "show-description"
       }, " ", this.props.business.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-reviews"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, this.props.reviews.map(function (review) {
+        debugger;
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reviews_review_list_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          review: review,
+          key: review.id,
+          author: _this3.props.users[review.user_id]
+        });
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-right"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-addy"
@@ -783,13 +832,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _business_show__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./business_show */ "./frontend/components/businesses/business_show.jsx");
 /* harmony import */ var _actions_business_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/business_actions */ "./frontend/actions/business_actions.js");
-/* harmony import */ var _actions_review_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/review_actions */ "./frontend/actions/review_actions.js");
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
 
 
 
 
 
 var msp = function msp(state, ownProps) {
+  // debugger
   return {
     business: state.entities.businesses[ownProps.match.params.id] || {
       title: "",
@@ -801,7 +851,9 @@ var msp = function msp(state, ownProps) {
       opening_hours: "",
       closing_hours: "",
       photoUrls: []
-    }
+    },
+    reviews: Object.values(state.entities.reviews),
+    users: state.entities.users
   };
 };
 
@@ -810,8 +862,8 @@ var mdp = function mdp(dispatch) {
     fetchBusiness: function fetchBusiness(businessId) {
       return dispatch(Object(_actions_business_actions__WEBPACK_IMPORTED_MODULE_2__["fetchBusiness"])(businessId));
     },
-    fetchReviews: function fetchReviews() {
-      return dispatch(Object(_actions_review_actions__WEBPACK_IMPORTED_MODULE_3__["fetchReviews"])());
+    fetchUsers: function fetchUsers() {
+      return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_3__["fetchUsers"])());
     }
   };
 };
@@ -1246,7 +1298,7 @@ function (_React$Component) {
         user_id: this.props.user.id,
         business_id: this.props.business.id
       };
-      this.props.processReview(review).then(this.props.history.push("/businesses/".concat(this.props.match.params.business.id)));
+      this.props.processReview(review).then(this.props.history.push("/businesses/".concat(this.props.match.params.id)));
     }
   }, {
     key: "renderErrors",
@@ -1356,6 +1408,32 @@ var mdp = function mdp(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(msp, mdp)(_review_form__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/reviews/review_list_item.jsx":
+/*!**********************************************************!*\
+  !*** ./frontend/components/reviews/review_list_item.jsx ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var ReviewListItem = function ReviewListItem(props) {
+  // debugger
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "review-index-box"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.review.rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.review.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.author.first_name));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(ReviewListItem));
 
 /***/ }),
 
@@ -1809,7 +1887,8 @@ var businessesReducer = function businessesReducer() {
       return action.businesses;
 
     case _actions_business_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_BUSINESS"]:
-      return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state, _defineProperty({}, action.business.id, action.business));
+      // debugger
+      return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state, _defineProperty({}, action.business.business.id, action.business.business));
 
     default:
       return state;
@@ -1909,9 +1988,11 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _actions_review_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/review_actions */ "./frontend/actions/review_actions.js");
-/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/merge */ "./node_modules/lodash/merge.js");
-/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_merge__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _actions_business_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/business_actions */ "./frontend/actions/business_actions.js");
+/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/merge */ "./node_modules/lodash/merge.js");
+/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_merge__WEBPACK_IMPORTED_MODULE_2__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -1927,10 +2008,13 @@ var reviewsReducer = function reviewsReducer() {
       return action.reviews;
 
     case _actions_review_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_REVIEW"]:
-      return lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state, _defineProperty({}, action.review.id, action.review));
+      return lodash_merge__WEBPACK_IMPORTED_MODULE_2___default()({}, state, _defineProperty({}, action.review.id, action.review));
+
+    case _actions_business_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_BUSINESS"]:
+      return action.business.reviews || {};
 
     case _actions_review_actions__WEBPACK_IMPORTED_MODULE_0__["REMOVE_REVIEW"]:
-      newState = lodash_merge__WEBPACK_IMPORTED_MODULE_1___default()({}, state);
+      newState = lodash_merge__WEBPACK_IMPORTED_MODULE_2___default()({}, state);
       delete newState[action.reviewId];
       return newState;
 
@@ -2047,12 +2131,7 @@ var sessionReducer = function sessionReducer() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/merge */ "./node_modules/lodash/merge.js");
-/* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_merge__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
+/* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/user_actions */ "./frontend/actions/user_actions.js");
 
 
 var usersReducer = function usersReducer() {
@@ -2061,8 +2140,8 @@ var usersReducer = function usersReducer() {
   Object.freeze(state);
 
   switch (action.type) {
-    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_CURRENT_USER"]:
-      return lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()({}, state, _defineProperty({}, action.user.id, action.user));
+    case _actions_user_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_USERS"]:
+      return action.users;
 
     default:
       return state;
@@ -2276,6 +2355,25 @@ var logout = function logout() {
   return $.ajax({
     url: "/api/session",
     method: "DELETE"
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/user_api_util.js":
+/*!****************************************!*\
+  !*** ./frontend/util/user_api_util.js ***!
+  \****************************************/
+/*! exports provided: fetchUsers */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchUsers", function() { return fetchUsers; });
+var fetchUsers = function fetchUsers() {
+  return $.ajax({
+    url: "/api/users",
+    method: "GET"
   });
 };
 
