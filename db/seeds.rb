@@ -7,7 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # require 'open-uri'
 
-User.create(email: 'sponch@sponch.mail', password: "sponch1", first_name: "sponch", last_name: "sponch")
+User.destroy_all
+Business.destroy_all
+Review.destroy_all
+
+
+
+User.create(email: 'MY@LEG.com', password: "sponch0", first_name: "Fred", last_name: "Rechid")
+User.create(email: 'sponge@bob.com', password: "sponch1", first_name: "SpongeBob", last_name: "SquarePants")
+User.create(email: 'patrick@star.com', password: "sponch2", first_name: "Patrick", last_name: "Star")
+User.create(email: 'squidward@tentacles.com', password: "sponch3", first_name: "Squidward", last_name: "Tentacles")
+User.create(email: 'mr@krabs.com', password: "sponch4", first_name: "Eugene", last_name: "Krabs")
+User.create(email: 'sheldon@plankton.com', password: "sponch5", first_name: "Sheldon", last_name: "Plankton")
  
 krusty_krab = Business.create(
  title: "Krusty Krab", 

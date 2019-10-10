@@ -778,18 +778,53 @@ function (_React$Component) {
         className: "business-title-show"
       }, this.props.business.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "business-rating-show"
-      }, "RATING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "RATING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/businesses/".concat(this.props.business.id, "/reviews")
+      }, "Write a review"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "business-category-show"
-      }, "category")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "label-map"
+      }, "category")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "h2-map"
       }, "Location & Hours"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "map-and-hours"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-map"
-      }, "MAP"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "show-map-2",
+        src: this.props.business.photoUrls[0]
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "biz-hours"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Mon ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Tue ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Wed ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Thu ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Fri ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Sat ", this.props.business.opening_hours, " - ", this.props.business.closing_hours), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Sun ", this.props.business.opening_hours, " - ", this.props.business.closing_hours))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        className: "label-description"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "biz-hours3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "get-bizzy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Mon "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "biz-hours2"
+      }, this.props.business.opening_hours, " - ", this.props.business.closing_hours)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "get-bizzy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Tue "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "biz-hours2"
+      }, this.props.business.opening_hours, " - ", this.props.business.closing_hours)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "get-bizzy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Wed "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "biz-hours2"
+      }, this.props.business.opening_hours, " - ", this.props.business.closing_hours)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "get-bizzy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Thu "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "biz-hours2"
+      }, this.props.business.opening_hours, " - ", this.props.business.closing_hours)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "get-bizzy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Fri "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "biz-hours2"
+      }, this.props.business.opening_hours, " - ", this.props.business.closing_hours)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "get-bizzy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Sat "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "biz-hours2"
+      }, this.props.business.opening_hours, " - ", this.props.business.closing_hours)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "get-bizzy"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Sun "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "biz-hours2"
+      }, this.props.business.opening_hours, " - ", this.props.business.closing_hours))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "h2-description"
       }, "About The Business"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "business-description-show"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -797,7 +832,6 @@ function (_React$Component) {
       }, " ", this.props.business.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-reviews"
       }, this.props.reviews.map(function (review) {
-        // debugger
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reviews_review_list_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           review: review,
           key: review.id,
@@ -1429,8 +1463,27 @@ __webpack_require__.r(__webpack_exports__);
 var ReviewListItem = function ReviewListItem(props) {
   // debugger
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "review-index-box"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.review.rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.review.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.author.first_name));
+    className: "review-index-box2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "review-list-item-leftest-side"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: window.placeholderUrl,
+    className: "placeholder-prof-pic"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "review-list-item-left-side"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "review-name-list"
+  }, props.author.first_name, " ", props.author.last_name[0], "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "review-location-list"
+  }, "Bikini Bottom"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "amount-reviews-list"
+  }, " 25 reviews ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "review-list-item-right-side"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "review-rating-list"
+  }, props.review.rating), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "review-body-list"
+  }, props.review.body)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(ReviewListItem));
