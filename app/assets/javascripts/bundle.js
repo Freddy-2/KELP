@@ -797,7 +797,7 @@ function (_React$Component) {
       }, " ", this.props.business.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-reviews"
       }, this.props.reviews.map(function (review) {
-        debugger;
+        // debugger
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reviews_review_list_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           review: review,
           key: review.id,
