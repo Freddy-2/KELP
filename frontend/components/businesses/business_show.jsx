@@ -101,7 +101,7 @@ class BusinessShow extends React.Component {
                             })}</div>             */}
                             {/* {this.props.author.first_name} */}
                             {this.props.reviews.map(review => {
-                                debugger
+                                // debugger
                               return  <ReviewListItem
                                     review={review}
                                     key={review.id}
