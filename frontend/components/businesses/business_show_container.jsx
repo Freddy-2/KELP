@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import BusinessShow from './business_show';
 import { fetchBusiness } from '../../actions/business_actions'
-import { fetchReviews } from '../../actions/review_actions'
+import { fetchUsers } from '../../actions/user_actions'
 
 
 const msp = (state, ownProps) => {
+
+    // debugger
     return {
         business: state.entities.businesses[ownProps.match.params.id] || 
         {title: "",
@@ -16,14 +18,17 @@ const msp = (state, ownProps) => {
         opening_hours: "",
         closing_hours: "",
         photoUrls: [],
-        }
+        },
+        reviews: Object.values(state.entities.reviews),
+        users: state.entities.users
     }
+    
 }
 
 const mdp = dispatch => {
     return{
     fetchBusiness: (businessId) => dispatch(fetchBusiness(businessId)),
-    fetchReviews: () => dispatch(fetchReviews()),
+    fetchUsers: () => dispatch(fetchUsers()),
     }
 }
 

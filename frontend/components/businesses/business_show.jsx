@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../footer/footer';
+import ReviewListItem from '../reviews/review_list_item';
 
 
 class BusinessShow extends React.Component {
@@ -14,8 +15,10 @@ class BusinessShow extends React.Component {
     }
 
     componentDidMount(){
+        // debugger
        this.props.fetchBusiness(this.props.match.params.id);
-       this.props.fetchReviews();
+    //    debugger
+       this.props.fetchUsers();
     }
 
     update(field) {
@@ -32,6 +35,11 @@ class BusinessShow extends React.Component {
 
 
     render() {
+        // debugger
+        // let revIds = this.props.reviews.map(review => {
+        //     return review.user_id;
+        // });
+        // debugger
         return (
             <>
                 <header className="form-page-header">
@@ -84,7 +92,23 @@ class BusinessShow extends React.Component {
                <div className="show-description"> {this.props.business.description}</div>
                </div>
                 <div className="show-reviews">
-                            {/* <div className="each-review">{this.props.business.reviews.map(review => {review})}</div> */}
+
+{/*                         
+                            <div>{this.props.users.map(user => {
+                                if (user.id === revIds[0]) {
+                                    return user.first_name;
+                                }
+                            })}</div>             */}
+                            {/* {this.props.author.first_name} */}
+                            {this.props.reviews.map(review => {
+                                debugger
+                              return  <ReviewListItem
+                                    review={review}
+                                    key={review.id}
+                                    author={this.props.users[review.user_id]}
+                            />})}
+
+                            
                 </div>
              </div>
              <div className="show-right">
