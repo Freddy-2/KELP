@@ -197,8 +197,8 @@ var fetchReviews = function fetchReviews() {
 };
 var fetchReview = function fetchReview(id) {
   return function (dispatch) {
-    return _util_review_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchReview"](id).then(function (review) {
-      return dispatch(receiveReview(review));
+    return _util_review_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchReviews"](id).then(function (review) {
+      return dispatch(receiveReviews(review));
     }, function (err) {
       return dispatch(receiveErrors(err.responseJSON));
     });
@@ -659,6 +659,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchBusiness(this.props.match.params.id);
+      this.props.fetchReviews();
     }
   }, {
     key: "update",
@@ -753,9 +754,7 @@ function (_React$Component) {
         className: "show-description"
       }, " ", this.props.business.description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-reviews"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "each-review"
-      }, "REVIEW"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-right"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-addy"
@@ -784,6 +783,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _business_show__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./business_show */ "./frontend/components/businesses/business_show.jsx");
 /* harmony import */ var _actions_business_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/business_actions */ "./frontend/actions/business_actions.js");
+/* harmony import */ var _actions_review_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/review_actions */ "./frontend/actions/review_actions.js");
+
 
 
 
@@ -808,6 +809,9 @@ var mdp = function mdp(dispatch) {
   return {
     fetchBusiness: function fetchBusiness(businessId) {
       return dispatch(Object(_actions_business_actions__WEBPACK_IMPORTED_MODULE_2__["fetchBusiness"])(businessId));
+    },
+    fetchReviews: function fetchReviews() {
+      return dispatch(Object(_actions_review_actions__WEBPACK_IMPORTED_MODULE_3__["fetchReviews"])());
     }
   };
 };
@@ -1210,13 +1214,20 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ReviewForm).call(this, props));
     _this.state = {
       body: '',
-      rating: 0
+      rating: 0,
+      business_id: "",
+      user_id: ""
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(ReviewForm, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchBusiness(this.props.match.params.id);
+    }
+  }, {
     key: "update",
     value: function update(field) {
       var _this2 = this;
@@ -1228,19 +1239,21 @@ function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      var _this3 = this;
-
       e.preventDefault();
-      this.props.processReview(this.state).then(function () {
-        return _this3.props.history.push("/");
-      });
+      var review = {
+        body: this.state.body,
+        rating: this.state.rating,
+        user_id: this.props.user.id,
+        business_id: this.props.business.id
+      };
+      this.props.processReview(review).then(this.props.history.push("/businesses/".concat(this.props.match.params.business.id)));
     }
   }, {
     key: "renderErrors",
     value: function renderErrors() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.errors.map(function (error, i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "big-error-hours",
+          className: "biggly-error-hours",
           key: "error-".concat(i)
         }, error);
       }));
@@ -1264,10 +1277,16 @@ function (_React$Component) {
       }, this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "review-form-box"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "RATING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "RATING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "number",
+        value: this.state.rating,
+        onChange: this.update("rating")
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         className: "review-text-body",
         cols: "30",
-        rows: "10"
+        rows: "10",
+        value: this.state.body,
+        onChange: this.update("body")
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "review-submit",
         type: "submit",
@@ -1279,7 +1298,7 @@ function (_React$Component) {
   return ReviewForm;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (ReviewForm);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(ReviewForm));
 
 /***/ }),
 
@@ -1295,19 +1314,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_review_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/review_actions */ "./frontend/actions/review_actions.js");
 /* harmony import */ var _review_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./review_form */ "./frontend/components/reviews/review_form.jsx");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _actions_business_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/business_actions */ "./frontend/actions/business_actions.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
  // import { Link } from 'react-router-dom';
 
 
 
-var msp = function msp(state) {
+var msp = function msp(state, ownProps) {
   return {
     // nav: <Link to="/signup">Sign Up</Link>,
     errors: state.errors.session,
-    user: state.entities.users[state.session.id]
+    user: state.entities.users[state.session.id],
+    business: state.entities.businesses[ownProps.match.params.id] || {
+      title: "",
+      description: "",
+      longitude: 0,
+      latitude: 0,
+      address: "",
+      price: 0,
+      opening_hours: "",
+      closing_hours: "",
+      photoUrls: []
+    }
   };
 };
 
@@ -1315,6 +1347,9 @@ var mdp = function mdp(dispatch) {
   return {
     processReview: function processReview(review) {
       return dispatch(Object(_actions_review_actions__WEBPACK_IMPORTED_MODULE_1__["createReview"])(review));
+    },
+    fetchBusiness: function fetchBusiness(id) {
+      return dispatch(Object(_actions_business_actions__WEBPACK_IMPORTED_MODULE_3__["fetchBusiness"])(id));
     } // clearErrors: () => dispatch(clearErrors([])),
 
   };
@@ -2121,7 +2156,7 @@ var fetchReview = function fetchReview(id) {
 var createReview = function createReview(review) {
   return $.ajax({
     url: "/api/reviews",
-    method: "review",
+    method: "POST",
     data: {
       review: review
     }
