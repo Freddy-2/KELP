@@ -1,0 +1,50 @@
+.review-index-box2{
+display: flex;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-top: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.review-rating-list{
+
+}
+
+.review-list-item-left-side{
+padding-left: 5px;
+}
+
+.review-name-list{
+  font-size: 14px;
+      padding-bottom: 5px;
+}
+
+
+.review-body-list{
+
+}
+
+.review-list-item-right-side{
+
+}
+
+.review-location-list{
+font-size: 12px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.amount-reviews-list{
+  font-size: 12px;
+}
+
+.review-list-item-leftest-side{
+
+}
+
+.placeholder-prof-pic{
+      width: 60px;
+    height: 60px;
+    border-radius: 4px;
+}

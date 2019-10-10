@@ -71,44 +71,67 @@ class BusinessShow extends React.Component {
                     
                     <div className="business-title-show">{this.props.business.title}</div> 
                     <div className="business-rating-show" >RATING</div>
+                    <Link to={`/businesses/${this.props.business.id}/reviews`}>Write a review</Link>
                     <div className="business-category-show">category</div>
+                    
                 </div>
 
-                <label className="label-map">Location & Hours</label>
+                <h2 className="h2-map">Location & Hours</h2>
                 <div className="map-and-hours">
-                    <div className="show-map">MAP</div>
+                    <div className="show-map"><img className="show-map-2" src={this.props.business.photoUrls[0]} /></div>
                     <ul className="biz-hours">
-                        <li>Mon {this.props.business.opening_hours} - {this.props.business.closing_hours}</li>
-                        <li>Tue {this.props.business.opening_hours} - {this.props.business.closing_hours}</li>
-                        <li>Wed {this.props.business.opening_hours} - {this.props.business.closing_hours}</li>
-                        <li>Thu {this.props.business.opening_hours} - {this.props.business.closing_hours}</li>
-                        <li>Fri {this.props.business.opening_hours} - {this.props.business.closing_hours}</li>
-                        <li>Sat {this.props.business.opening_hours} - {this.props.business.closing_hours}</li>
-                        <li>Sun {this.props.business.opening_hours} - {this.props.business.closing_hours}</li>
+                        <div className="biz-hours3">
+
+                        <div className="get-bizzy">
+                            <li>Mon </li>
+                            <span className="biz-hours2">{this.props.business.opening_hours} - {this.props.business.closing_hours}</span>
+                        </div>
+
+                        <div className="get-bizzy">
+                        <li>Tue </li>
+                        <span className="biz-hours2">{this.props.business.opening_hours} - {this.props.business.closing_hours}</span>
+                        </div>
+
+                        <div className="get-bizzy">
+                            <li>Wed </li>
+                            <span className="biz-hours2">{this.props.business.opening_hours} - {this.props.business.closing_hours}</span>
+                        </div>
+
+                        <div className="get-bizzy">
+                            <li>Thu </li>
+                            <span className="biz-hours2">{this.props.business.opening_hours} - {this.props.business.closing_hours}</span>
+                        </div>
+                        
+                        <div className="get-bizzy">
+                            <li>Fri </li>
+                            <span className="biz-hours2">{this.props.business.opening_hours} - {this.props.business.closing_hours}</span>
+                        </div>
+                        
+                        <div className="get-bizzy">
+                            <li>Sat </li>
+                            <span className="biz-hours2">{this.props.business.opening_hours} - {this.props.business.closing_hours}</span>
+                        </div>
+                        
+                        <div className="get-bizzy">
+                            <li>Sun </li>
+                            <span className="biz-hours2">{this.props.business.opening_hours} - {this.props.business.closing_hours}</span>
+                        </div>
+                        
+                        </div>
                     </ul>
                 </div>
-                <label className="label-description">About The Business</label>
+                <h2 className="h2-description">About The Business</h2>
                 <div className="business-description-show">
                <div className="show-description"> {this.props.business.description}</div>
                </div>
                 <div className="show-reviews">
-
-{/*                         
-                            <div>{this.props.users.map(user => {
-                                if (user.id === revIds[0]) {
-                                    return user.first_name;
-                                }
-                            })}</div>             */}
-                            {/* {this.props.author.first_name} */}
                             {this.props.reviews.map(review => {
-                                // debugger
+       
                               return  <ReviewListItem
                                     review={review}
                                     key={review.id}
                                     author={this.props.users[review.user_id]}
-                            />})}
-
-                            
+                            />})}        
                 </div>
              </div>
              <div className="show-right">

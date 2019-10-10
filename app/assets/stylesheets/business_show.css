@@ -24,10 +24,8 @@
 .business-category-show{
     color: blue;
     font-size: 14px;
-    margin-bottom: 40px;
-    border-bottom: solid;
-    border-bottom-style: groove;
-    border-bottom-width: thin;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e6e6e6;
     padding-bottom: 15px;
 }
 
@@ -37,7 +35,8 @@
 
 .show-page{
 display: flex;
-justify-content: center;
+justify-content: flex-start;
+padding-left: 475px;
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -51,15 +50,14 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 .biz-hours{
   font-weight: bold;
+  font-size: 14px;
 }
 
 .business-description-show{
   display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-bottom: solid;
-    border-bottom-style: groove;
-    border-bottom-width: thin;
+    border-bottom: 1px solid #e6e6e6;
     padding-bottom: 15px;
     padding-top: 10px;
     margin-bottom: 40px;
@@ -78,7 +76,7 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .show-left{
-  width: 500px;
+  width: 605px;
   margin-right: 50px;
 }
 
@@ -96,24 +94,22 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 .map-and-hours{
   display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border-bottom: solid;
-    border-bottom-style: groove;
-    border-bottom-width: thin;
+    justify-content: flex-start;
+border-bottom: 1px solid #e6e6e6;
     padding-bottom: 15px;
-    padding-top: 10px;
+    padding-top: 20px;
     margin-bottom: 40px;
 }
 
-.label-map{
+.h2-map{
 color: #333333;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
 }
 
-.label-description{
+.h2-description{
 color: #333333;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -129,4 +125,30 @@ color: #333333;
 
 .show-page-pic{
   width: 25%;
+}
+
+.show-map-2{
+    width: 300px;
+    padding-right: 35px;
+}
+
+.review-index-box{
+  
+}
+
+.biz-hours2{
+  font-weight: normal;
+  padding-left: 25px;
+}
+.biz-hours3{
+
+}
+.biz-hours4{
+
+}
+
+.get-bizzy{
+      display: flex;
+    justify-content: space-between;
+        padding-bottom: 5px;
 }
