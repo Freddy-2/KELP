@@ -15,6 +15,7 @@ class BusinessShow extends React.Component {
 
     componentDidMount(){
        this.props.fetchBusiness(this.props.match.params.id);
+       this.props.fetchReviews();
     }
 
     update(field) {
@@ -26,6 +27,9 @@ class BusinessShow extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
     }
+
+ 
+
 
     render() {
         return (
@@ -80,7 +84,7 @@ class BusinessShow extends React.Component {
                <div className="show-description"> {this.props.business.description}</div>
                </div>
                 <div className="show-reviews">
-                        <div className="each-review">REVIEW</div>
+                            {/* <div className="each-review">{this.props.business.reviews.map(review => {review})}</div> */}
                 </div>
              </div>
              <div className="show-right">

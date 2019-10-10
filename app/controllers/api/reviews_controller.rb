@@ -13,7 +13,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.new(review_params)
 
     if @review.save
-      render "api/business/show"
+      render "api/reviews/show"
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -23,7 +23,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.find(params[:id])
 
     if @review.update(review_params)
-      render "api/business/show"
+      render "api/reviews/show"
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -33,7 +33,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.find(params[:id])
 
     if @review.destroy
-      render "api/business/show"
+      render "api/businesses/show"
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -42,6 +42,6 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:body, :rating)
+    params.require(:review).permit(:body, :rating, :business_id, :user_id)
   end
 end
