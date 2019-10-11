@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import header from "../header/header";
 import BusinessIndexItem from "./business_index_item";
 import Footer from '../footer/footer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 class BusinessIndex extends React.Component {
     constructor(props) {
         super(props)
@@ -32,20 +34,28 @@ class BusinessIndex extends React.Component {
         return (
             <>
                 <header className="form-page-header">
-                    <div className="index-header">
+                <div className="index-header">
                     <Link to="/" className="logo-link-biz-page">
                         <img src={window.kelpLogoUrl} className="kelp-logo-biz-page" />
                     </Link>
-                    <form className="biz-search" onSubmit={this.handleSubmit}>
-                        <label className="biz-find-label"> Find
-              <input className="biz-find-search" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
-                        </label>
-                        <label className="biz-near-label"> Near
-              <input className="biz-near-search" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
-                        </label>
-                        <Link to="/businesses" className="biz-search-button"><img className="biz-search" src={window.searchUrl} /></Link>
-                    </form>
-                </div>
+                
+                    <div className="search-and-button2">
+                        <form className="home-page-search2" onSubmit={this.handleSubmit}>
+                            <div className="find-input-box2">
+                                <label className="find-label2"> Find
+              <input className="find-search2" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
+                                </label>
+                            </div>
+                            <div className="near-input-box2">
+                                <label className="near-label2"> Near
+              <input className="near-search2" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
+                                </label>
+                            </div>
+                            <div className="search-button4"> <Link to="/businesses" className="search-button6"><FontAwesomeIcon icon={faSearch} className="fa-search2" /></Link></div>
+                        </form>
+
+                    </div>  
+                    </div>
                 </header>
                 
                 <div className="biggest-biz-box">
@@ -54,7 +64,7 @@ class BusinessIndex extends React.Component {
                     <div className="bigger-biz-box">
                         
                         <div className="businesses-box">
-                            <h2 className="all-results"> All Results:</h2>
+                            <h2 className="all-results"> All Results</h2>
                             {this.props.businesses.map(business => (
                                 <BusinessIndexItem 
                                     business={business}
@@ -63,7 +73,7 @@ class BusinessIndex extends React.Component {
                             ))}
                         </div>
                         <div className="business-map">
-                            MAP
+                            <img src={window.krabbyPatty4Url} className="place-map" />
                         </div>
                     </div>
                 </div>

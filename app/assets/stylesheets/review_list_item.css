@@ -8,25 +8,35 @@ display: flex;
 }
 
 .review-rating-list{
-
+    color: seagreen;
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .review-list-item-left-side{
 padding-left: 5px;
+
+
 }
 
 .review-name-list{
   font-size: 14px;
       padding-bottom: 5px;
+      color: #0073bb;
+      font-weight: bold;
 }
 
 
 .review-body-list{
-
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+color: #333333;
 }
 
 .review-list-item-right-side{
-
+padding-left: 90px;
+width: 375px;
 }
 
 .review-location-list{
@@ -38,13 +48,22 @@ font-size: 12px;
 .amount-reviews-list{
   font-size: 12px;
 }
+.amount-reviews-list span{
+  font-size: 12px;
+  font-weight: bold;
+}
 
 .review-list-item-leftest-side{
 
 }
 
 .placeholder-prof-pic{
-      width: 60px;
+    width: 60px;
     height: 60px;
     border-radius: 4px;
+    padding-right: 5px;
+}
+
+.starcon-list{
+  color: orange;
 }

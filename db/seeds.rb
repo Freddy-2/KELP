@@ -26,9 +26,9 @@ krusty_krab = Business.create(
  longitude: 1, 
  latitude: 2, 
  address: "831 Bottom Feeder Lane",
- price: 2,
- opening_hours: "8 am",
- closing_hours: "10 pm"
+ price: 3,
+ opening_hours: "8:00 am",
+ closing_hours: "10:00 pm"
 )
 
 krusty_krab1 = File.open(Rails.root.join('app', 'assets', 'images', 'krustyKrab.png'))
@@ -49,9 +49,9 @@ chum_bucket = Business.create(
  longitude: 2, 
  latitude: 1, 
  address: "832 Bottom Feeder Lane",
- price: 2,
- opening_hours: "8 am",
- closing_hours: "10 pm"
+ price: 1,
+ opening_hours: "6:00 am",
+ closing_hours: "11:00 pm"
 )
 
 chum_bucket1 = File.open(Rails.root.join('app', 'assets', 'images', 'chumBucket.png'))
@@ -76,8 +76,8 @@ tree_dome = Business.create(
  latitude: 4, 
  address: "144 Conch Street",
  price: 1,
- opening_hours: "8 am",
- closing_hours: "10 pm"
+ opening_hours: "9:00 am",
+ closing_hours: "11:30 pm"
 )
 
 tree_dome1 = File.open(Rails.root.join('app', 'assets', 'images', 'treeDome.png'))

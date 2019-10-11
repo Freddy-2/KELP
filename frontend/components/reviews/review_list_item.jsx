@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -13,7 +14,7 @@ const ReviewListItem = (props) => {
     <div className="review-list-item-left-side">
       <div className="review-name-list">{props.author.first_name} {props.author.last_name[0]}.</div>
       <div className="review-location-list">Bikini Bottom</div>
-      <div className="amount-reviews-list"> 25 reviews </div>
+      <div className="amount-reviews-list">  <FontAwesomeIcon icon={faStar} className="starcon-list" /><span>25</span> reviews </div>
     </div>
     <div className="review-list-item-right-side">
       <div className="review-rating-list">{props.review.rating}</div>

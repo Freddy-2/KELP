@@ -1,17 +1,19 @@
 .businesses-box{
-
+padding-right: 50px;
+    padding-left: 160px;
 }
 
 .business-label{
     padding-left:450px;
     color: #333333;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 21px;
     border-bottom: solid;
     border-style: inset;
     border-bottom-width: thin;
     padding-bottom: 20px;
     padding-top: 25px;
+    font-weight: bold;
 
 }
 .business-map{
@@ -21,7 +23,7 @@
 .bigger-biz-box{
 display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     margin: 15px;
 }
 
@@ -46,7 +48,10 @@ display: flex;
 }
 
 .all-results{
-
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .index-header{
@@ -128,3 +133,116 @@ margin-top: -3px;
 
 }
 
+/* START HERE */
+.near-label2{
+    display: flex;
+    padding: 7px;
+    box-shadow: none;
+    border: none;
+    /* border-radius: 4px; */
+    background: #fff;
+    margin: -5px;
+    color: #666666;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+/* label for find input */
+.find-label2{
+    display: flex;
+    padding: 7px;
+    box-shadow: none;
+    border: none;
+    /* border-radius: 4px; */
+    background: #fff;
+    margin: -5px;
+    color: #666666;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* input field for near */
+.near-search2{
+    padding: 3px;
+    box-shadow: none;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    outline-width: 0;
+    font-size: 14px;
+    width: 330px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.near-search2::placeholder{
+    color: #333333;
+    font-size: 18px;
+    /* font-weight: bold; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.find-search2::placeholder{
+    /* color: black; */
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* input field for find */
+.find-search2{
+    /* padding: 6px;
+    padding-right: 44px;
+    padding-left: 12px;
+    box-shadow: none;
+    border: none; */
+    /* border-radius: 4px; */
+    /* background: #fff;
+    outline-width: 0;
+    font-size: 14px;
+    width: 375px;
+    
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    border-right: 1px solid black;
+    display: inline-block;
+    padding: 3px;
+    box-shadow: none;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    outline-width: 0;
+    font-size: 14px;
+    width: 330px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.search-button6{
+padding-bottom: 29px; 
+    /* padding-top: 27px; */
+    margin-left: 5px;
+    background: crimson;
+    /* padding-right: 31px; */
+    border-radius: 4px;
+    padding: 11px;
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-left: 24px;
+    color: white;
+}
+
+.home-page-search2{
+  /* text-align: center; */
+  /* display: inline-block;
+  position: absolute;
+  width:  100%; */
+ /* padding: 40px; */
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+        align-items: center;
+}
+
+.place-map{
+    height: 345px;
+    width: 300px;
+        position: fixed;
+}

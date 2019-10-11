@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
 
   demoButton(e){
     e.preventDefault();
-    this.props.processForm({ email:"sponch@sponch.mail", password:"sponch1" }).then(() => this.props.history.push("/"))
+    this.props.processForm({ email:"MY@LEG.com", password:"sponch0" }).then(() => this.props.history.push("/"))
   }
 
   renderErrors() {

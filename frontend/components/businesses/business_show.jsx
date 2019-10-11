@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../footer/footer';
 import ReviewListItem from '../reviews/review_list_item';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar, faDirections, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 
 class BusinessShow extends React.Component {
@@ -47,15 +49,23 @@ class BusinessShow extends React.Component {
                         <Link to="/" className="logo-link-biz-page">
                             <img src={window.kelpLogoUrl} className="kelp-logo-biz-page" />
                         </Link>
-                        <form className="biz-search" onSubmit={this.handleSubmit}>
-                            <label className="biz-find-label"> Find
-              <input className="biz-find-search" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
-                            </label>
-                            <label className="biz-near-label"> Near
-              <input className="biz-near-search" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
-                            </label>
-                            <Link to="/businesses" className="biz-search-button"><img className="biz-search" src={window.searchUrl} /></Link>
-                        </form>
+
+                        <div className="search-and-button2">
+                            <form className="home-page-search2" onSubmit={this.handleSubmit}>
+                                <div className="find-input-box2">
+                                    <label className="find-label2"> Find
+              <input className="find-search2" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
+                                    </label>
+                                </div>
+                                <div className="near-input-box2">
+                                    <label className="near-label2"> Near
+              <input className="near-search2" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
+                                    </label>
+                                </div>
+                                <div className="search-button4"> <Link to="/businesses" className="search-button6"><FontAwesomeIcon icon={faSearch} className="fa-search2" /></Link></div>
+                            </form>
+
+                        </div>
                     </div>
                 </header>
                 <div className="show-page-pics">
@@ -70,10 +80,10 @@ class BusinessShow extends React.Component {
                 <div className="title-area">
                     
                     <div className="business-title-show">{this.props.business.title}</div> 
-                    <div className="business-rating-show" >RATING</div>
-                    <Link to={`/businesses/${this.props.business.id}/reviews`}>Write a review</Link>
-                    <div className="business-category-show">category</div>
+                            <div className="business-rating-show" > <FontAwesomeIcon icon={faStar} className="starcon-list2" /> <FontAwesomeIcon icon={faStar} className="starcon-list2" /> <FontAwesomeIcon icon={faStar} className="starcon-list2" /> <FontAwesomeIcon icon={faStar} className="starcon-list2" /> <FontAwesomeIcon icon={faStar} className="starcon-list2" /><span>{this.props.reviews.length} reviews</span></div>
                     
+                    <div className="business-category-show"> <span>$$</span> <span className="dot"></span> Great Stuff, Oh Barnacles</div>
+                            <div className="business-rev-link-show">  <Link to={`/businesses/${this.props.business.id}/reviews`} className="review-show-write-button"><span><FontAwesomeIcon icon={faStar}/>Write a Review</span> </Link></div>
                 </div>
 
                 <h2 className="h2-map">Location & Hours</h2>
@@ -135,8 +145,14 @@ class BusinessShow extends React.Component {
                 </div>
              </div>
              <div className="show-right">
+                 <div className='addresses-show'>
+                <FontAwesomeIcon icon={faDirections} className="directocon" />
+                     <div className="show-right-right-side">
+                     <h2 className='gettem-directos'>Get Directions</h2>
                 <div className="show-addy">{this.props.business.address} </div>
                         <div className="show-addy">Bikini Bottom</div>
+                    </div>
+                </div>
              </div>
             </div>
             <Footer />
