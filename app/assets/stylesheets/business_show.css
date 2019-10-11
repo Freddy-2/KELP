@@ -22,26 +22,40 @@
 }
 
 .business-category-show{
-    color: blue;
-    font-size: 14px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #e6e6e6;
-    padding-bottom: 15px;
+    color: #0073bb;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-bottom: 30px;
+}
+
+.business-category-show span{
+  color: #333333;
 }
 
 .business-rating-show{
+    font-size: 20px;
+    color: salmon;
+    padding-bottom: 15px;
+}
 
+.business-rating-show span{
+  color: #666666;
+  font-size: 16px;
+  padding-left: 5px;
 }
 
 .show-page{
 display: flex;
-justify-content: flex-start;
-padding-left: 475px;
+justify-content: center;
+/* padding-left: 475px; */
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
 
 .title-area{
-
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 30px;
 }
 
 .show-map{
@@ -58,7 +72,7 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     flex-direction: column;
     justify-content: space-between;
     border-bottom: 1px solid #e6e6e6;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
     padding-top: 10px;
     margin-bottom: 40px;
 }
@@ -72,7 +86,8 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .show-addy{
-
+padding-bottom: 3px;
+font-size: 14px;
 }
 
 .show-left{
@@ -81,7 +96,8 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .show-right{
-  
+  width: 320px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .business-photos{
@@ -98,7 +114,7 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 border-bottom: 1px solid #e6e6e6;
     padding-bottom: 15px;
     padding-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .h2-map{
@@ -111,10 +127,12 @@ color: #333333;
 color: #333333;
     font-size: 16px;
     font-weight: bold;
+        padding-bottom: 10px
 }
 
 .show-description{
-
+    font-size: 14px;
+    color: #333333;
 }
 
 .show-page-pics{
@@ -128,7 +146,8 @@ color: #333333;
 }
 
 .show-map-2{
-    width: 300px;
+     width: 320px;
+    height: 210px;
     padding-right: 35px;
 }
 
@@ -151,4 +170,68 @@ color: #333333;
       display: flex;
     justify-content: space-between;
         padding-bottom: 5px;
+}
+
+.addresses-show{
+border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    padding: 40px;
+    position: fixed;
+    padding-right: 153px;
+    display: flex;
+}
+
+.gettem-directos{
+color: #0073bb;
+padding-bottom: 3px;
+}
+
+.starcon-list2{
+
+}
+
+.business-rev-link-show{
+
+}
+
+.dot {
+height: 2px;
+    width: 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.review-show-write-button{
+padding: 3px;
+    padding-bottom: 6px;
+    padding-left: 17px;
+    text-decoration: none;
+    color: #666666;
+    font-weight: bold;
+    padding-right: 17px;
+    text-align: center;
+    cursor: pointer;
+    margin: auto;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+}
+
+.review-show-write-button:hover{
+  background-color: lightpink;
+  transition: .5s;
+}
+
+.review-show-write-button span{
+  color: salmon;
+  font-size: 12px;
+}
+
+.directocon{
+color: #666666;
+}
+
+.show-right-right-side{
+
 }

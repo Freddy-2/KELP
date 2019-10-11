@@ -70,7 +70,7 @@ class ReviewForm extends React.Component {
 
             <form onSubmit={this.handleSubmit} className="review-form-box">
               <div>RATING</div>
-              <input type="number" value={this.state.rating} onChange={this.update("rating")}/>
+              <input type="number" value={this.state.rating} min="1" max="5" onChange={this.update("rating")}/>
             <textarea className="review-text-body" cols="30" rows="10" value={this.state.body} onChange={this.update("body")} />
             <input className="review-submit" type="submit" value="Post Review" />
             </form>
