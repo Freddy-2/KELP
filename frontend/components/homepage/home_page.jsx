@@ -29,6 +29,7 @@ class HomePage extends React.Component {
 
 
   render() {
+    // debugger
     return (
       <>
       <div className='home-page'>
@@ -63,9 +64,9 @@ class HomePage extends React.Component {
         </div>
 
         <div className="under-search">
-            <label className="best-business">Find the Best Businessess in the Deep Blue Sea</label><br/>
+            <label className="best-business">Find the Best Businesses in the Deep Blue Sea</label><br/>
             <div className="krusty-krab-div">
-            <img src={window.krustyKrabUrl} className="krusty-krab"/>
+         <Link to='/businesses/1'><img src={window.krustyKrabUrl} className="krusty-krab"/></Link> 
               {/* <img src={window.krabbyPattyUrl} className="patty-krab"/> */}
             <p className="krusty-krab-name">The Krusty Krab!</p>
             </div>

@@ -1,6 +1,9 @@
 .review-form{
 display: flex;
-justify-content: center;
+    /* justify-content: center; */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .review-form-box{
@@ -8,12 +11,20 @@ justify-content: center;
 }
 
 .review-text-body{
-    resize: none;
+  resize: none;
     min-height: 258px;
+    border: none;
+    outline-color: white;
+    width: 500px;
+    margin-top: 15px;
+    font-size: 18px;
+}
+.review-text-body::placeholder{
+    font-size: 18px;
 }
 
 .review-submit{
-    width: 100%;
+        width: 35%;
     cursor: pointer;    
     padding: 7px;
     font-size: 16px;
@@ -22,4 +33,41 @@ justify-content: center;
     border: 1px solid blue;
     border-radius: 4px;
     font-weight: bold;
+}
+
+.rev-form-title{
+        color: #0073bb;
+    text-decoration: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+}
+.rev-form-rating-box{
+display: flex;
+    flex-direction: row;
+}
+
+.fake-box{
+border: 1px solid #e6e6e6;
+padding: 20px;
+    padding-right: 2px;
+    margin-top: 20px;
+}
+
+.rev-form-page-header{
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.rating-thingy{
+font-size: 20px;
+    margin-right: 10px;
+}
+
+.rating-texty{
+    font-size: 14px;
+    color: #333333;
+    margin-top: 8px;
 }

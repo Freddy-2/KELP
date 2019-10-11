@@ -19,6 +19,7 @@ const Header = props => {
       </div>
     </nav>
   );
+  
   const personalGreeting = () => (
     <div className="logged-in-header">
       <div className="left-side-header">
@@ -28,7 +29,11 @@ const Header = props => {
           <a href="https://www.linkedin.com/in/alfredallegretti" className="header-linkedin-link">Chat</a>
         </div>
       </div>
+      {/* <div className="right-side-loggout"> */}
+      <span className="header-pp"> <img className="header-pp2" src={props.user.prof_pic} /></span>
       <button className="header-logout-button" onClick={props.logout}>Log Out</button>
+      {/* </div> */}
+      
     </div>
   );
 

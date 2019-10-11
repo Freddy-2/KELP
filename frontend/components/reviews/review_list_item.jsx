@@ -9,7 +9,7 @@ const ReviewListItem = (props) => {
   // debugger
   return <div className="review-index-box2">
     <div className="review-list-item-leftest-side" >
-      <img src={window.placeholderUrl} className="placeholder-prof-pic" />
+    <img className="placeholder-prof-pic" src={props.author.prof_pic} />
     </div>
     <div className="review-list-item-left-side">
       <div className="review-name-list">{props.author.first_name} {props.author.last_name[0]}.</div>

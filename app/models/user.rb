@@ -23,6 +23,7 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
 
   has_many :reviews
+  has_one_attached :prof_pic
 
 
   def self.find_by_credentials(email, password)

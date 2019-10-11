@@ -1,6 +1,6 @@
 .businesses-box{
 padding-right: 50px;
-    padding-left: 160px;
+    /* padding-left: 160px; */
 }
 
 .business-label{
@@ -23,7 +23,7 @@ padding-right: 50px;
 .bigger-biz-box{
 display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     margin: 15px;
 }
 
@@ -244,5 +244,5 @@ padding-bottom: 29px;
 .place-map{
     height: 345px;
     width: 300px;
-        position: fixed;
+        /* position: fixed; */
 }
