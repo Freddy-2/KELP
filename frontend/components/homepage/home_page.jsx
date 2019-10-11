@@ -12,9 +12,17 @@ class HomePage extends React.Component {
     super(props)
     this.state = {
       find: "",
-      near: ""
+      near: "",
+      user: {email:"", prof_pic: null}
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+
+  componentDidMount() {
+    // debugger
+    //    debugger
+    this.props.fetchUsers();
   }
 
   handleSubmit(e) {
