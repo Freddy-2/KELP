@@ -66,7 +66,7 @@ class HomePage extends React.Component {
         <div className="under-search">
             <label className="best-business">Find the Best Businesses in the Deep Blue Sea</label><br/>
             <div className="krusty-krab-div">
-         <Link to='/businesses/1'><img src={window.krustyKrabUrl} className="krusty-krab"/></Link> 
+         <Link to='/businesses/4'><img src={window.krustyKrabUrl} className="krusty-krab"/></Link> 
               {/* <img src={window.krabbyPattyUrl} className="patty-krab"/> */}
             <p className="krusty-krab-name">The Krusty Krab!</p>
             </div>
