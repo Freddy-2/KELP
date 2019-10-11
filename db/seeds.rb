@@ -13,12 +13,35 @@ Review.destroy_all
 
 
 
-User.create(email: 'MY@LEG.com', password: "sponch0", first_name: "Fred", last_name: "Rechid")
-User.create(email: 'sponge@bob.com', password: "sponch1", first_name: "SpongeBob", last_name: "SquarePants")
-User.create(email: 'patrick@star.com', password: "sponch2", first_name: "Patrick", last_name: "Star")
-User.create(email: 'squidward@tentacles.com', password: "sponch3", first_name: "Squidward", last_name: "Tentacles")
-User.create(email: 'mr@krabs.com', password: "sponch4", first_name: "Eugene", last_name: "Krabs")
-User.create(email: 'sheldon@plankton.com', password: "sponch5", first_name: "Sheldon", last_name: "Plankton")
+user1 = User.create(email: 'MY@LEG.com', password: "sponch0", first_name: "Fred", last_name: "Rechid")
+
+prof_pic1 = File.open(Rails.root.join('app', 'assets', 'images', 'profPic.png'))
+user1.prof_pic.attach(io: prof_pic1, filename: 'profPic.png')
+
+user2 = User.create(email: 'sponge@bob.com', password: "sponch1", first_name: "SpongeBob", last_name: "SquarePants")
+
+prof_pic2 = File.open(Rails.root.join('app', 'assets', 'images', 'profPic2.png'))
+user2.prof_pic.attach(io: prof_pic2, filename: 'profPic2.png')
+
+user3 = User.create(email: 'patrick@star.com', password: "sponch2", first_name: "Patrick", last_name: "Star")
+
+prof_pic3 = File.open(Rails.root.join('app', 'assets', 'images', 'profPic3.png'))
+user3.prof_pic.attach(io: prof_pic3, filename: 'profPic3.png')
+
+user4 = User.create(email: 'squidward@tentacles.com', password: "sponch3", first_name: "Squidward", last_name: "Tentacles")
+
+prof_pic4 = File.open(Rails.root.join('app', 'assets', 'images', 'profPic4.png'))
+user4.prof_pic.attach(io: prof_pic4, filename: 'profPic4.png')
+
+user5 = User.create(email: 'mr@krabs.com', password: "sponch4", first_name: "Eugene", last_name: "Krabs")
+
+prof_pic5 = File.open(Rails.root.join('app', 'assets', 'images', 'profPic5.png'))
+user5.prof_pic.attach(io: prof_pic5, filename: 'profPic5.png')
+
+user6 = User.create(email: 'sheldon@plankton.com', password: "sponch5", first_name: "Sheldon", last_name: "Plankton")
+
+prof_pic6 = File.open(Rails.root.join('app', 'assets', 'images', 'profPic6.png'))
+user6.prof_pic.attach(io: prof_pic6, filename: 'profPic6.png')
  
 krusty_krab = Business.create(
  title: "Krusty Krab", 
@@ -71,7 +94,7 @@ chum_bucket.photos.attach(io: chum_bucket4, filename: 'chumBucket4.png')
 
 tree_dome = Business.create(
  title: "Sandy's Treedome", 
- description: "Sandy's Treedome is where Sandy Cheeks lives. Because Sandy is a squirrel, it is the only place Sandy can live in Bikini Bottom. Many interesting science experiments go on here.", 
+ description: "Sandy's Treedome is where Sandy Cheeks lives. It's the only place Sandy can live in Bikini Bottom. A ton of interesting science experiments go on here.", 
  longitude: 3, 
  latitude: 4, 
  address: "144 Conch Street",
@@ -92,3 +115,71 @@ tree_dome.photos.attach(io: tree_dome3, filename: 'treeDome3.png')
 tree_dome4 = File.open(Rails.root.join('app', 'assets', 'images', 'treeDome4.png'))
 tree_dome.photos.attach(io: tree_dome4, filename: 'treeDome4.png')
 
+weenie_hut = Business.create(
+ title: "Weenie Hut Jr's", 
+ description: "Weenie Hut Jr's is a restaurant located in Bikini Bottom. It has two other counterparts, Super Weenie Hut Jr's and Weenie Hut General. You usually end up here if you aren't tough enough for the Salty Spitoon", 
+ longitude: 5, 
+ latitude: 8, 
+ address: "235 Weenie Street",
+ price: 3,
+ opening_hours: "7:00 am",
+ closing_hours: "5:30 pm"
+)
+
+weenie_hut1 = File.open(Rails.root.join('app', 'assets', 'images', 'weenieHut.png'))
+weenie_hut.photos.attach(io: weenie_hut1, filename: 'weenieHut.png')
+
+weenie_hut2 = File.open(Rails.root.join('app', 'assets', 'images', 'weenieHut2.png'))
+weenie_hut.photos.attach(io: weenie_hut2, filename: 'weenieHut2.png')
+
+weenie_hut3 = File.open(Rails.root.join('app', 'assets', 'images', 'weenieHut3.png'))
+weenie_hut.photos.attach(io: weenie_hut3, filename: 'weenieHut3.png')
+
+weenie_hut4 = File.open(Rails.root.join('app', 'assets', 'images', 'weenieHut4.png'))
+weenie_hut.photos.attach(io: weenie_hut4, filename: 'weenieHut4.png')
+
+salty = Business.create(
+ title: "The Salty Spitoon", 
+ description: "The Salty Spitoon is a restaurant/bar for tough fish. It is believed to be stricter and tougher than other sailor clubs, and only the toughest of creatures are granted entrance. How tough are ya?", 
+ longitude: 11, 
+ latitude: 9, 
+ address: "999 No Weenies Lane",
+ price: 3,
+ opening_hours: "5:00 am",
+ closing_hours: "11:59 pm"
+)
+
+salty1 = File.open(Rails.root.join('app', 'assets', 'images', 'salty.png'))
+salty.photos.attach(io: salty1, filename: 'salty.png')
+
+salty2 = File.open(Rails.root.join('app', 'assets', 'images', 'salty2.png'))
+salty.photos.attach(io: salty2, filename: 'salty2.png')
+
+salty3 = File.open(Rails.root.join('app', 'assets', 'images', 'salty3.png'))
+salty.photos.attach(io: salty3, filename: 'salty3.png')
+
+salty4 = File.open(Rails.root.join('app', 'assets', 'images', 'salty4.png'))
+salty.photos.attach(io: salty4, filename: 'salty4.png')
+
+school = Business.create(
+ title: "Mrs. Puff's Boating School", 
+ description: "Mrs. Puff's Boating School is a drivers education facility located in Bikini Bottom where Mrs. Puff teaches boat driving and boat safety. When SpongeBob is there trying to get his license, it's not always the case", 
+ longitude: 11, 
+ latitude: 9, 
+ address: "444 Meep Beep Drive",
+ price: 3,
+ opening_hours: "9:00 am",
+ closing_hours: "6:00 pm"
+)
+
+school1 = File.open(Rails.root.join('app', 'assets', 'images', 'school.png'))
+school.photos.attach(io: school1, filename: 'school.png')
+
+school2 = File.open(Rails.root.join('app', 'assets', 'images', 'school2.png'))
+school.photos.attach(io: school2, filename: 'school2.png')
+
+school3 = File.open(Rails.root.join('app', 'assets', 'images', 'school3.png'))
+school.photos.attach(io: school3, filename: 'school3.png')
+
+school4 = File.open(Rails.root.join('app', 'assets', 'images', 'school4.png'))
+school.photos.attach(io: school4, filename: 'school4.png')

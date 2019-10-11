@@ -1076,7 +1076,12 @@ var Header = function Header(props) {
     }, "Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: "https://www.linkedin.com/in/alfredallegretti",
       className: "header-linkedin-link"
-    }, "Chat"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, "Chat"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "header-pp"
+    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "header-pp2",
+      src: props.user.prof_pic
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "header-logout-button",
       onClick: props.logout
     }, "Log Out"));
@@ -1204,6 +1209,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      // debugger
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "home-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1273,12 +1279,14 @@ function (_React$Component) {
         className: "under-search"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         className: "best-business"
-      }, "Find the Best Businessess in the Deep Blue Sea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Find the Best Businesses in the Deep Blue Sea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "krusty-krab-div"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/businesses/1"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: window.krustyKrabUrl,
         className: "krusty-krab"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "krusty-krab-name"
       }, "The Krusty Krab!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
     }
@@ -1333,7 +1341,8 @@ var mdp = function mdp(dispatch) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _footer_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../footer/footer */ "./frontend/components/footer/footer.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1354,7 +1363,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
- // import Footer from '../footer/footer';
+
 
 
 
@@ -1422,8 +1431,8 @@ function (_React$Component) {
       //   <Redirect to="/login" />;
       // }
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-        className: "form-page-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        className: "rev-form-page-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/",
         className: "logo-link-form-page"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1434,30 +1443,41 @@ function (_React$Component) {
       }, this.renderErrors(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
         className: "review-form-box"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "RATING"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        className: "rev-form-title",
+        to: "/businesses/".concat(this.props.business.id)
+      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, " ", this.props.business.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fake-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "rev-form-rating-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "number",
         value: this.state.rating,
+        className: "rating-thingy",
         min: "1",
         max: "5",
         onChange: this.update("rating")
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "rating-texty"
+      }, "Select your rating")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         className: "review-text-body",
         cols: "30",
         rows: "10",
         value: this.state.body,
+        placeholder: "Your review helps others learn about great underwater businesses.                                                                                                       Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees.",
         onChange: this.update("body")
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "review-submit",
         type: "submit",
         value: "Post Review"
-      }))));
+      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 
   return ReviewForm;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(ReviewForm));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["withRouter"])(ReviewForm));
 
 /***/ }),
 
@@ -1544,8 +1564,8 @@ var ReviewListItem = function ReviewListItem(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-list-item-leftest-side"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: window.placeholderUrl,
-    className: "placeholder-prof-pic"
+    className: "placeholder-prof-pic",
+    src: props.author.prof_pic
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-list-item-left-side"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

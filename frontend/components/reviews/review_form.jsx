@@ -1,5 +1,5 @@
 import React from 'react';
-// import Footer from '../footer/footer';
+import Footer from '../footer/footer';
 import { Link, withRouter, Redirect } from 'react-router-dom';
 
 
@@ -59,7 +59,7 @@ class ReviewForm extends React.Component {
     // }
     return (
       <>
-        <header className="form-page-header">
+        <header className="rev-form-page-header">
           <Link to="/" className="logo-link-form-page">
             <img src={window.kelpLogoUrl} className="kelp-logo-form-page" />
           </Link>
@@ -67,16 +67,22 @@ class ReviewForm extends React.Component {
 
         <div className="review-form">
             {this.renderErrors()}
-
+           
             <form onSubmit={this.handleSubmit} className="review-form-box">
-              <div>RATING</div>
-              <input type="number" value={this.state.rating} min="1" max="5" onChange={this.update("rating")}/>
-            <textarea className="review-text-body" cols="30" rows="10" value={this.state.body} onChange={this.update("body")} />
+            <Link className='rev-form-title' to={`/businesses/${this.props.business.id}`}> <span> {this.props.business.title}</span></Link>
+              <div className='fake-box'>
+              <div className='rev-form-rating-box'>
+              <input type="number" value={this.state.rating} className="rating-thingy" min="1" max="5" onChange={this.update("rating")}/>
+              <div className='rating-texty'>Select your rating</div>
+              </div>
+              <textarea className="review-text-body" cols="30" rows="10" value={this.state.body} placeholder="Your review helps others learn about great underwater businesses.                                                                                                       Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees."  onChange={this.update("body")} />
             <input className="review-submit" type="submit" value="Post Review" />
+            </div>
             </form>
 
-
+        
         </div>
+        <Footer />
       </>
     );
   }
