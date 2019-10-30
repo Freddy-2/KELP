@@ -20,6 +20,13 @@ const Header = props => {
     </nav>
   );
   
+  const profPic = () => {
+    // debugger
+    if(props.user.prof_pic === undefined){
+      return <span className="header-pp"> <img className="header-pp2" src={window.krabbyPatty4Url} /></span>
+    } else { return <span className="header-pp"> <img className="header-pp2" src={props.user.prof_pic} /></span> }
+  }
+
   const personalGreeting = () => (
     <div className="logged-in-header">
       <div className="left-side-header">
@@ -30,8 +37,10 @@ const Header = props => {
         </div>
       </div>
       {/* <div className="right-side-loggout"> */}
-      <span className="header-pp"> <img className="header-pp2" src={props.user.prof_pic} /></span>
+      {profPic()}
+      
       <button className="header-logout-button" onClick={props.logout}>Log Out</button>
+
       {/* </div> */}
       
     </div>

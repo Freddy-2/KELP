@@ -521,8 +521,7 @@ function (_React$Component) {
       }, " Near", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "near-search2",
         type: "text",
-        placeholder: "Bikini Bottom",
-        onChange: this.update("near")
+        placeholder: "Bikini Bottom"
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search-button4"
       }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1060,6 +1059,25 @@ var Header = function Header(props) {
     }, "Sign Up")));
   };
 
+  var profPic = function profPic() {
+    // debugger
+    if (props.user.prof_pic === undefined) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "header-pp"
+      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "header-pp2",
+        src: window.krabbyPatty4Url
+      }));
+    } else {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "header-pp"
+      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "header-pp2",
+        src: props.user.prof_pic
+      }));
+    }
+  };
+
   var personalGreeting = function personalGreeting() {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "logged-in-header"
@@ -1076,12 +1094,7 @@ var Header = function Header(props) {
     }, "Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: "https://www.linkedin.com/in/alfredallegretti",
       className: "header-linkedin-link"
-    }, "Chat"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "header-pp"
-    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      className: "header-pp2",
-      src: props.user.prof_pic
-    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    }, "Chat"))), profPic(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "header-logout-button",
       onClick: props.logout
     }, "Log Out"));
@@ -1256,6 +1269,7 @@ function (_React$Component) {
         className: "near-search",
         type: "text",
         placeholder: "Bikini Bottom",
+        disabled: true,
         onChange: this.update("near")
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search-button3"
@@ -1576,14 +1590,26 @@ __webpack_require__.r(__webpack_exports__);
 
 var ReviewListItem = function ReviewListItem(props) {
   // debugger
+  var profPic = function profPic() {
+    // debugger
+    if (props.author.prof_pic === undefined) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "placeholder-prof-pic",
+        src: window.krabbyPatty4Url
+      });
+    } else {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "placeholder-prof-pic",
+        src: props.author.prof_pic
+      });
+    }
+  };
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-index-box2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-list-item-leftest-side"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "placeholder-prof-pic",
-    src: props.author.prof_pic
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, profPic()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-list-item-left-side"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-name-list"
@@ -1594,7 +1620,7 @@ var ReviewListItem = function ReviewListItem(props) {
   }, "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faStar"],
     className: "starcon-list"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "25"), " reviews ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.author.reviews.count), " reviews ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-list-item-right-side"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-rating-list"
@@ -1735,7 +1761,8 @@ function (_React$Component) {
       email: '',
       password: '',
       first_name: '',
-      last_name: ''
+      last_name: '' // prof_pic: window.spongeFiveUrl
+
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.namesForSignUp = _this.namesForSignUp.bind(_assertThisInitialized(_this));
@@ -51404,7 +51431,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

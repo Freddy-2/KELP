@@ -56,7 +56,7 @@ class HomePage extends React.Component {
                     </div>
             <div className="near-input-box">
             <label className="near-label"> Near
-              <input className="near-search" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
+              <input className="near-search" type="text" placeholder="Bikini Bottom" disabled onChange={this.update("near")} />
             </label>
             </div>
                   <div className="search-button3"> <Link to="/businesses" className="search-button"><FontAwesomeIcon icon={faSearch} className="fa-search" /></Link></div>
