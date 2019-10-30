@@ -48,7 +48,7 @@ class BusinessIndex extends React.Component {
                             </div>
                             <div className="near-input-box2">
                                 <label className="near-label2"> Near
-              <input className="near-search2" type="text" placeholder="Bikini Bottom" onChange={this.update("near")} />
+              <input className="near-search2" type="text" placeholder="Bikini Bottom" />
                                 </label>
                             </div>
                             <div className="search-button4"> <Link to="/businesses" className="search-button6"><FontAwesomeIcon icon={faSearch} className="fa-search2" /></Link></div>
