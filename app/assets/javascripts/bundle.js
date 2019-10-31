@@ -723,9 +723,9 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       // debugger
-      this.props.fetchBusiness(this.props.match.params.id); //    debugger
-
       this.props.fetchUsers();
+      this.props.fetchBusiness(this.props.match.params.id); //    debugger
+      //    this.props.fetchUsers();
     }
   }, {
     key: "update",
@@ -1603,7 +1603,13 @@ var ReviewListItem = function ReviewListItem(props) {
         src: props.author.prof_pic
       });
     }
-  };
+  }; // const revIds = () => {
+  //   if (props.author.reviewIds.length === undefined) {
+  //     return <div className="amount-reviews-list">  <FontAwesomeIcon icon={faStar} className="starcon-list" /><span>24</span> reviews </div> 
+  //   } else { return <div className="amount-reviews-list">  <FontAwesomeIcon icon={faStar} className="starcon-list" /><span>{props.author.reviewIds.length}</span> reviews </div> }
+  // }
+  //  {revIds()}
+
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-index-box2"
@@ -1620,7 +1626,7 @@ var ReviewListItem = function ReviewListItem(props) {
   }, "  ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_3__["faStar"],
     className: "starcon-list"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.author.reviews.count), " reviews ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.author.reviewIds), " reviews ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-list-item-right-side"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-rating-list"
