@@ -18,8 +18,8 @@ class BusinessShow extends React.Component {
 
     componentDidMount(){
         // debugger
-        this.props.fetchUsers();
-       this.props.fetchBusiness(this.props.match.params.id);
+        this.props.fetchUsers().then( ()=> this.props.fetchBusiness(this.props.match.params.id));
+       
     //    debugger
     //    this.props.fetchUsers();
     }

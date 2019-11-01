@@ -577,7 +577,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var msp = function msp(state) {
+var msp = function msp(state, ownProps) {
   return {
     businesses: Object.values(state.entities.businesses)
   };
@@ -722,18 +722,21 @@ function (_React$Component) {
   _createClass(BusinessShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       // debugger
-      this.props.fetchUsers();
-      this.props.fetchBusiness(this.props.match.params.id); //    debugger
+      this.props.fetchUsers().then(function () {
+        return _this2.props.fetchBusiness(_this2.props.match.params.id);
+      }); //    debugger
       //    this.props.fetchUsers();
     }
   }, {
     key: "update",
     value: function update(field) {
-      var _this2 = this;
+      var _this3 = this;
 
       return function (e) {
-        return _this2.setState(_defineProperty({}, field, e.target.value));
+        return _this3.setState(_defineProperty({}, field, e.target.value));
       };
     }
   }, {
@@ -744,7 +747,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       // debugger
       // let revIds = this.props.reviews.map(review => {
@@ -896,7 +899,7 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reviews_review_list_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           review: review,
           key: review.id,
-          author: _this3.props.users[review.user_id]
+          author: _this4.props.users[review.user_id]
         });
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-right"
@@ -957,7 +960,7 @@ var msp = function msp(state, ownProps) {
       photoUrls: []
     },
     reviews: Object.values(state.entities.reviews),
-    users: state.entities.users
+    users: state.entities.users || {}
   };
 };
 
@@ -1591,7 +1594,8 @@ __webpack_require__.r(__webpack_exports__);
 var ReviewListItem = function ReviewListItem(props) {
   // debugger
   var profPic = function profPic() {
-    // debugger
+    debugger;
+
     if (props.author.prof_pic === undefined) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "placeholder-prof-pic",

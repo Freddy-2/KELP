@@ -20,7 +20,7 @@ const msp = (state, ownProps) => {
         photoUrls: [],
         },
         reviews: Object.values(state.entities.reviews),
-        users: state.entities.users
+        users: state.entities.users || {}
     }
     
 }

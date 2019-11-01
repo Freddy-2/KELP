@@ -3,7 +3,7 @@ import BusinessIndex from './business_index';
 import { fetchBusinesses } from '../../actions/business_actions'
 
 
-const msp = state => {
+const msp = (state, ownProps) => {
     return{
     businesses: Object.values(state.entities.businesses),
     }
