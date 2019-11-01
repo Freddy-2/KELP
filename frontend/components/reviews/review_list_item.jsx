@@ -9,7 +9,7 @@ const ReviewListItem = (props) => {
   // debugger
 
   const profPic = () => {
-    // debugger
+    debugger
     if (props.author.prof_pic === undefined) {
       return  <img className="placeholder-prof-pic" src={window.krabbyPatty4Url} />
     } else { return <img className="placeholder-prof-pic" src={props.author.prof_pic} /> }
