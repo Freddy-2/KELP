@@ -1,8 +1,8 @@
 # README
 
 ## Kelp! 
-![Image of Kelp](https://kelp-aa.herokuapp.com/)
 
+### Check out Kelp
 [Kelp Live Link](https://kelp-aa.herokuapp.com/)
 
 # Technologies Used
