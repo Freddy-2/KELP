@@ -1,6 +1,7 @@
 # README
 
 ## Kelp! 
+![Image of Kelp](https://kelp-aa.herokuapp.com/)
 
 [Kelp Live Link](https://kelp-aa.herokuapp.com/)
 
