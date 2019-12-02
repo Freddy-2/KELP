@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Kelp! 
 
-Things you may want to cover:
+[Kelp Live Link](https://kelp-aa.herokuapp.com/)
 
-* Ruby version
+# Technologies Used
 
-* System dependencies
+* React / Redux
 
-* Configuration
+* JavaScript
 
-* Database creation
+* JQuery (AJAX)
 
-* Database initialization
+* Ruby on Rails
 
-* How to run the test suite
+* PostgreSQL
 
-* Services (job queues, cache servers, search engines, etc.)
+* Heroku
 
-* Deployment instructions
+* CSS
 
-* ...
+* Webpack
