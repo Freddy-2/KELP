@@ -60,7 +60,7 @@ class HomePage extends React.Component {
               <input className="near-search" type="text" placeholder="Bikini Bottom" disabled onChange={this.update("near")} />
             </label>
             </div>
-                  <div className="search-button3"> <Link to="/businesses" className="search-button"><FontAwesomeIcon icon={faSearch} className="fa-search" /></Link></div>
+                  <div className="search-button3"> <Link to={`/businesses/search/${this.state.find}`} className="search-button"><FontAwesomeIcon icon={faSearch} className="fa-search" /></Link></div>
           </form>
 
         </div>                

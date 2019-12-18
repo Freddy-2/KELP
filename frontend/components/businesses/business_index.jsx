@@ -9,9 +9,11 @@ class BusinessIndex extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            find: "",
-            near: ""
+            find: this.props.find,
+            near: "",
+            businesses: this.props.businesses,
         }
+        // debugger
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -22,15 +24,25 @@ class BusinessIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchBusinesses()
+        .then(() => this.setState({
+            businesses: this.props.businesses.filter((bizzy) => bizzy.title.toLowerCase().includes(this.state.find.toLowerCase()))
+        }))
     }
 
     update(field) {
-        return e => this.setState({
-            [field]: e.target.value
-        });
+        return e => {
+           console.log(this.state.find) 
+           this.setState({
+            [field]: e.target.value,
+               businesses: this.props.businesses.filter((bizzy) => bizzy.title.toLowerCase().includes(e.target.value.toLowerCase()))
+        });}
     }
 
     render() {
+        // let bizzys = this.props.businesses;
+        // if (!this.state.find === ""){
+        //     bizzys = bizzys.filter((bizzy) => bizzy.title.includes(this.state.find))
+        // }
         return (
             <>
                 <header className="form-page-header">
@@ -51,7 +63,7 @@ class BusinessIndex extends React.Component {
               <input className="near-search2" type="text" placeholder="Bikini Bottom" />
                                 </label>
                             </div>
-                            <div className="search-button4"> <Link to="/businesses" className="search-button6"><FontAwesomeIcon icon={faSearch} className="fa-search2" /></Link></div>
+                            <div className="search-button4"> <Link to={`/businesses/search/${this.state.find}`} className="search-button6"><FontAwesomeIcon icon={faSearch} className="fa-search2" /></Link></div>
                         </form>
 
                     </div>  
@@ -65,7 +77,7 @@ class BusinessIndex extends React.Component {
                         
                         <div className="businesses-box">
                             <h2 className="all-results"> All Results</h2>
-                            {this.props.businesses.map(business => (
+                            {this.state.businesses.map(business => (
                                 <BusinessIndexItem 
                                     business={business}
                                     key={business.id}

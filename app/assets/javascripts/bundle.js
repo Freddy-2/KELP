@@ -382,6 +382,10 @@ var App = function App() {
     component: _session_form_signup_form_container__WEBPACK_IMPORTED_MODULE_2__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
     exact: true,
+    path: "/businesses/search/:query",
+    component: _businesses_business_index_container__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+    exact: true,
     path: "/businesses",
     component: _businesses_business_index_container__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
@@ -460,9 +464,11 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(BusinessIndex).call(this, props));
     _this.state = {
-      find: "",
-      near: ""
-    };
+      find: _this.props.find,
+      near: "",
+      businesses: _this.props.businesses
+    }; // debugger
+
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -475,20 +481,38 @@ function (_React$Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.fetchBusinesses();
+      var _this2 = this;
+
+      this.props.fetchBusinesses().then(function () {
+        return _this2.setState({
+          businesses: _this2.props.businesses.filter(function (bizzy) {
+            return bizzy.title.toLowerCase().includes(_this2.state.find.toLowerCase());
+          })
+        });
+      });
     }
   }, {
     key: "update",
     value: function update(field) {
-      var _this2 = this;
+      var _this3 = this;
 
       return function (e) {
-        return _this2.setState(_defineProperty({}, field, e.target.value));
+        var _this3$setState;
+
+        console.log(_this3.state.find);
+
+        _this3.setState((_this3$setState = {}, _defineProperty(_this3$setState, field, e.target.value), _defineProperty(_this3$setState, "businesses", _this3.props.businesses.filter(function (bizzy) {
+          return bizzy.title.toLowerCase().includes(e.target.value.toLowerCase());
+        })), _this3$setState));
       };
     }
   }, {
     key: "render",
     value: function render() {
+      // let bizzys = this.props.businesses;
+      // if (!this.state.find === ""){
+      //     bizzys = bizzys.filter((bizzy) => bizzy.title.includes(this.state.find))
+      // }
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
         className: "form-page-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -525,7 +549,7 @@ function (_React$Component) {
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search-button4"
       }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/businesses",
+        to: "/businesses/search/".concat(this.state.find),
         className: "search-button6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_5__["FontAwesomeIcon"], {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_6__["faSearch"],
@@ -540,7 +564,7 @@ function (_React$Component) {
         className: "businesses-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "all-results"
-      }, " All Results"), this.props.businesses.map(function (business) {
+      }, " All Results"), this.state.businesses.map(function (business) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_business_index_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           business: business,
           key: business.id
@@ -578,8 +602,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var msp = function msp(state, ownProps) {
+  // debugger
   return {
-    businesses: Object.values(state.entities.businesses)
+    businesses: Object.values(state.entities.businesses),
+    find: ownProps.match.params.query || ""
   };
 };
 
@@ -1278,7 +1304,7 @@ function (_React$Component) {
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search-button3"
       }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-        to: "/businesses",
+        to: "/businesses/search/".concat(this.state.find),
         className: "search-button"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faSearch"],
