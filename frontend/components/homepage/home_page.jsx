@@ -23,6 +23,7 @@ class HomePage extends React.Component {
     // debugger
     //    debugger
     this.props.fetchUsers();
+    this.props.fetchBusinesses();
   }
 
   handleSubmit(e) {
