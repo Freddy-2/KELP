@@ -56,7 +56,7 @@ class HomePage extends React.Component {
             <form className="home-page-search" onSubmit={this.handleSubmit}>
                   <div className="find-input-box">
             <label className="find-label"> Find
-              <input className="find-search" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
+              <input className="find-search" type="text" placeholder="Salty Spitoon, Krusty Krab, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
             </label>
                     </div>
             <div className="near-input-box">

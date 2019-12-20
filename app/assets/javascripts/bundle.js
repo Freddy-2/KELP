@@ -541,7 +541,7 @@ function (_React$Component) {
       }, " Find", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "find-search2",
         type: "text",
-        placeholder: "Krabby patties, Chum Bucket...",
+        placeholder: "Salty Spitoon, Krusty Krab, Chum Bucket...",
         value: this.state.find,
         onChange: this.update("find")
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1300,7 +1300,7 @@ function (_React$Component) {
       }, " Find", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "find-search",
         type: "text",
-        placeholder: "Krabby patties, Chum Bucket...",
+        placeholder: "Salty Spitoon, Krusty Krab, Chum Bucket...",
         value: this.state.find,
         onChange: this.update("find")
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

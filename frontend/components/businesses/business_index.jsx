@@ -59,7 +59,7 @@ class BusinessIndex extends React.Component {
                         <form className="home-page-search2" onSubmit={this.handleSubmit}>
                             <div className="find-input-box2">
                                 <label className="find-label2"> Find
-              <input className="find-search2" type="text" placeholder="Krabby patties, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
+              <input className="find-search2" type="text" placeholder="Salty Spitoon, Krusty Krab, Chum Bucket..." value={this.state.find} onChange={this.update("find")} />
                                 </label>
                             </div>
                             <div className="near-input-box2">
