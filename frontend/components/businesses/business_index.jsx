@@ -43,6 +43,10 @@ class BusinessIndex extends React.Component {
         // if (!this.state.find === ""){
         //     bizzys = bizzys.filter((bizzy) => bizzy.title.includes(this.state.find))
         // }
+        let searchy = `/businesses/search/${this.state.find}`;
+        if (this.state.find === "") {
+            searchy = `/businesses/`
+        }
         return (
             <>
                 <header className="form-page-header">
@@ -63,7 +67,8 @@ class BusinessIndex extends React.Component {
               <input className="near-search2" type="text" placeholder="Bikini Bottom" />
                                 </label>
                             </div>
-                            <div className="search-button4"> <Link to={`/businesses/search/${this.state.find}`} className="search-button6"><FontAwesomeIcon icon={faSearch} className="fa-search2" /></Link></div>
+                            {/* <div className="search-button4"> <Link to={`/businesses/search/${this.state.find}`} className="search-button6"><FontAwesomeIcon icon={faSearch} className="fa-search2" /></Link></div> */}
+                            <div className="search-button4"> <Link to={searchy} className="search-button6"><FontAwesomeIcon icon={faSearch} className="fa-search2" /></Link></div>
                         </form>
 
                     </div>  
