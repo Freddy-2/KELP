@@ -32,4 +32,4 @@ Kelp is a single page rails based web-app that is designed to provide the highes
 2. Allows users to search Bikini Bottom businesses
 3. Users can leave a rating and review for each business as long as they are logged in
 4. Pages are styled to look great and have a simple user interface
-5. Implements AWS S3 storage to retain User information, profile pictures and business pictures
+5. Implements AWS S3 storage to retain a users information, profile pictures and business pictures
