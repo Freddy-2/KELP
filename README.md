@@ -4,9 +4,8 @@
 Kelp is a single page rails based web-app that is designed to provide the highest quality in speed and user experience. Kelp helps sea-dwellers find the best food, entertainment and interesting spots Bikini Bottom has to offer.
 
 ### Check out Kelp
-![Kelp Pic](app/assets/images/kelppic.png?raw=true "kelp home pg")
 [Kelp Live Link](https://kelp-aa.herokuapp.com/)
-
+![Kelp Pic](app/assets/images/kelppic.png?raw=true "kelp home pg")
 
 # Technologies Used
 
