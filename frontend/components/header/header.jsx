@@ -9,7 +9,7 @@ const Header = props => {
       <div className="left-side-header">
       <Link to="/businesses" className="review-header">Write a Review</Link>
       <div className="header-links">
-        <a href="https://github.com/Freddy-2/KELP" className="header-github-link">Projects</a>
+        <a href="https://github.com/Freddy-2" className="header-github-link">Projects</a>
         <a href="https://www.linkedin.com/in/alfredallegretti" className="header-linkedin-link">Chat</a>
       </div>
       </div>

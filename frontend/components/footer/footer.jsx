@@ -8,7 +8,7 @@ const Footer = () => {
     <nav className="page-bottom">
       <div className="links">
         <a href="https://www.linkedin.com/in/alfredallegretti" className="linkedin-link">Contact Me</a>
-        <a href="https://github.com/Freddy-2/KELP" className="github-link">Check out my projects</a>
+        <a href="https://github.com/Freddy-2" className="github-link">Check out my projects</a>
         
       </div>
       <img className="footer-img" src={window.footerIMGUrl} />

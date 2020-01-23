@@ -71,7 +71,7 @@ class HomePage extends React.Component {
         </div>                
         <div className="home-page-links">
                   <a href="https://www.linkedin.com/in/alfredallegretti" className="home-linkedin-link"><span className="linkedin-logo"><FontAwesomeIcon icon={faLinkedin} /></span> LinkedIn</a>
-                  <a href="https://github.com/Freddy-2/KELP" className="home-github-link"><span className="github-logo"><FontAwesomeIcon icon={faGithub} /></span>Github</a>
+                  <a href="https://github.com/Freddy-2" className="home-github-link"><span className="github-logo"><FontAwesomeIcon icon={faGithub} /></span>Github</a>
         </div>
               <div className="logo-credit">Created my free logo at<a href="https://my.logomakr.com" className="home-logomaker-link">LogoMakr.com</a></div>
             </div>
