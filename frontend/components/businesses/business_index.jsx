@@ -31,7 +31,7 @@ class BusinessIndex extends React.Component {
 
     update(field) {
         return e => {
-           console.log(this.state.find) 
+        //    console.log(this.state.find) 
            this.setState({
             [field]: e.target.value,
                businesses: this.props.businesses.filter((bizzy) => bizzy.title.toLowerCase().includes(e.target.value.toLowerCase()))
