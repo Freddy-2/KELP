@@ -1042,7 +1042,7 @@ var Footer = function Footer() {
       href: "https://www.linkedin.com/in/alfredallegretti",
       className: "linkedin-link"
     }, "Contact Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "https://github.com/Freddy-2/KELP",
+      href: "https://github.com/Freddy-2",
       className: "github-link"
     }, "Check out my projects")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
       className: "footer-img",
@@ -1084,7 +1084,7 @@ var Header = function Header(props) {
     }, "Write a Review"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "header-links"
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "https://github.com/Freddy-2/KELP",
+      href: "https://github.com/Freddy-2",
       className: "header-github-link"
     }, "Projects"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: "https://www.linkedin.com/in/alfredallegretti",
@@ -1337,7 +1337,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
         icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_6__["faLinkedin"]
       })), " LinkedIn"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "https://github.com/Freddy-2/KELP",
+        href: "https://github.com/Freddy-2",
         className: "home-github-link"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "github-logo"
@@ -1644,8 +1644,7 @@ __webpack_require__.r(__webpack_exports__);
 var ReviewListItem = function ReviewListItem(props) {
   // debugger
   var profPic = function profPic() {
-    debugger;
-
+    // debugger
     if (props.author.prof_pic === undefined) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "placeholder-prof-pic",
@@ -51491,7 +51490,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
