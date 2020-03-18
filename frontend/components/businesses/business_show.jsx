@@ -11,7 +11,8 @@ class BusinessShow extends React.Component {
         super(props)
         this.state = {
             find: "",
-            near: ""
+            near: "",
+            user_id: "",
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -147,6 +148,8 @@ class BusinessShow extends React.Component {
                                     review={review}
                                     key={review.id}
                                     author={this.props.users[review.user_id]}
+                                    user_id={this.props.user.id}
+                                    deleteReview={this.props.deleteComment}
                             />})}        
                 </div>
              </div>

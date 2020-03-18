@@ -15,6 +15,14 @@ const ReviewListItem = (props) => {
     } else { return <img className="placeholder-prof-pic" src={props.author.prof_pic} /> }
   }
 
+  const gone = () => {
+    // debugger
+    
+    if (props.user_id === props.author.id){
+      let reviewId = props.key;
+      return <button className="header-logout-button" onClick={props.deleteReview}>delete</button>
+    }
+  }
   // const revIds = () => {
   //   if (props.author.reviewIds.length === undefined) {
   //     return <div className="amount-reviews-list">  <FontAwesomeIcon icon={faStar} className="starcon-list" /><span>24</span> reviews </div> 
@@ -25,6 +33,8 @@ const ReviewListItem = (props) => {
   return <div className="review-index-box2">
     <div className="review-list-item-leftest-side" >
     {profPic()}
+    {gone()}
+    
     </div>
     <div className="review-list-item-left-side">
       <div className="review-name-list">{props.author.first_name} {props.author.last_name[0]}.</div>

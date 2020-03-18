@@ -744,7 +744,8 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(BusinessShow).call(this, props));
     _this.state = {
       find: "",
-      near: ""
+      near: "",
+      user_id: ""
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
@@ -936,7 +937,9 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reviews_review_list_item__WEBPACK_IMPORTED_MODULE_3__["default"], {
           review: review,
           key: review.id,
-          author: _this4.props.users[review.user_id]
+          author: _this4.props.users[review.user_id],
+          user_id: _this4.props.user.id,
+          deleteReview: _this4.props.deleteComment
         });
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-right"
@@ -977,6 +980,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _business_show__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./business_show */ "./frontend/components/businesses/business_show.jsx");
 /* harmony import */ var _actions_business_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/business_actions */ "./frontend/actions/business_actions.js");
 /* harmony import */ var _actions_user_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/user_actions */ "./frontend/actions/user_actions.js");
+/* harmony import */ var _actions_review_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../actions/review_actions */ "./frontend/actions/review_actions.js");
+
 
 
 
@@ -997,7 +1002,8 @@ var msp = function msp(state, ownProps) {
       photoUrls: []
     },
     reviews: Object.values(state.entities.reviews),
-    users: state.entities.users || {}
+    users: state.entities.users || {},
+    user: state.entities.users[state.session.id] || {}
   };
 };
 
@@ -1008,6 +1014,9 @@ var mdp = function mdp(dispatch) {
     },
     fetchUsers: function fetchUsers() {
       return dispatch(Object(_actions_user_actions__WEBPACK_IMPORTED_MODULE_3__["fetchUsers"])());
+    },
+    deleteComment: function deleteComment(reviewId) {
+      return dispatch(Object(_actions_review_actions__WEBPACK_IMPORTED_MODULE_4__["deleteReview"])(reviewId));
     }
   };
 };
@@ -1655,6 +1664,17 @@ var ReviewListItem = function ReviewListItem(props) {
         src: props.author.prof_pic
       });
     }
+  };
+
+  var gone = function gone() {
+    // debugger
+    if (props.user_id === props.author.id) {
+      var reviewId = props.key;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "header-logout-button",
+        onClick: props.deleteReview
+      }, "delete");
+    }
   }; // const revIds = () => {
   //   if (props.author.reviewIds.length === undefined) {
   //     return <div className="amount-reviews-list">  <FontAwesomeIcon icon={faStar} className="starcon-list" /><span>24</span> reviews </div> 
@@ -1667,7 +1687,7 @@ var ReviewListItem = function ReviewListItem(props) {
     className: "review-index-box2"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-list-item-leftest-side"
-  }, profPic()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, profPic(), gone()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-list-item-left-side"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "review-name-list"
@@ -2426,7 +2446,6 @@ __webpack_require__.r(__webpack_exports__);
 var middlewares = [redux_thunk__WEBPACK_IMPORTED_MODULE_1__["default"]];
 
 if (true) {
-  // must use 'require' (import only allowed at top of file)
   var _require = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js"),
       logger = _require.logger;
 
@@ -51496,7 +51515,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

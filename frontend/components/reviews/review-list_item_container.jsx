@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 const msp = (state) => {
   return ({
-    users: Object.values(state.entities.users)
+    users: Object.values(state.entities.users),
   })
 }
 
