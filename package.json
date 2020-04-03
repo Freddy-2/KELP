@@ -28,8 +28,7 @@
     "redux-logger": "^3.0.6"
   },
   "scripts": {
-    "webpack": "webpack --mode=development --watch",
-
+    "webpack": "webpack --mode=development --watch"
   },
   "keywords": [],
   "author": "",
