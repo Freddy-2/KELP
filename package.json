@@ -28,7 +28,7 @@
     "redux-logger": "^3.0.6"
   },
   "scripts": {
-    "webpack": "webpack --watch --mode=development",
+    "webpack": "webpack --mode=development --watch",
     "postinstall": "webpack"
   },
   "keywords": [],
