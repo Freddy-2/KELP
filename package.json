@@ -35,8 +35,9 @@
     "redux-logger": "^3.0.6"
   },
   "scripts": {
-    "webpack": "webpack --mode=development --watch",
-    "postinstall": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
+    "webpack": "webpack --watch --mode=development"
   },
   "keywords": [],
   "author": "",

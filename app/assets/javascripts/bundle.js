@@ -238,14 +238,14 @@ var deleteReview = function deleteReview(reviewId) {
 /*!*********************************************!*\
   !*** ./frontend/actions/session_actions.js ***!
   \*********************************************/
-/*! exports provided: RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER, RECEIVE_ERRORS, receiveUser, logoutUser, receiveErrors, signup, login, logout, clearErrors */
+/*! exports provided: RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER, RECEIVE_SESSION_ERRORS, receiveUser, logoutUser, receiveErrors, signup, login, logout, clearErrors */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_CURRENT_USER", function() { return RECEIVE_CURRENT_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGOUT_CURRENT_USER", function() { return LOGOUT_CURRENT_USER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ERRORS", function() { return RECEIVE_ERRORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SESSION_ERRORS", function() { return RECEIVE_SESSION_ERRORS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveUser", function() { return receiveUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logoutUser", function() { return logoutUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveErrors", function() { return receiveErrors; });
@@ -257,7 +257,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 var LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
-var RECEIVE_ERRORS = "RECEIVE_ERRORS";
+var RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 var receiveUser = function receiveUser(user) {
   return {
     type: RECEIVE_CURRENT_USER,
@@ -272,7 +272,7 @@ var logoutUser = function logoutUser(userId) {
 };
 var receiveErrors = function receiveErrors(errors) {
   return {
-    type: RECEIVE_ERRORS,
+    type: RECEIVE_SESSION_ERRORS,
     errors: errors
   };
 };
@@ -1669,10 +1669,12 @@ var ReviewListItem = function ReviewListItem(props) {
   var gone = function gone() {
     // debugger
     if (props.user_id === props.author.id) {
-      var reviewId = props.key;
+      var reviewId = props.review.id;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "header-logout-button",
-        onClick: props.deleteReview
+        onClick: function onClick() {
+          return props.deleteReview(reviewId);
+        }
       }, "delete");
     }
   }; // const revIds = () => {
@@ -2348,7 +2350,7 @@ __webpack_require__.r(__webpack_exports__);
     case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
       return [];
 
-    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_ERRORS"]:
+    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_SESSION_ERRORS"]:
       return action.errors;
 
     default:
@@ -2532,6 +2534,7 @@ var editReview = function editReview(review) {
   });
 };
 var deleteReview = function deleteReview(id) {
+  // debugger
   return $.ajax({
     url: "/api/reviews/".concat(id),
     method: "DELETE"

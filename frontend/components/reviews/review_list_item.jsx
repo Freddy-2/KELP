@@ -19,8 +19,8 @@ const ReviewListItem = (props) => {
     // debugger
     
     if (props.user_id === props.author.id){
-      let reviewId = props.key;
-      return <button className="header-logout-button" onClick={props.deleteReview}>delete</button>
+      let reviewId = props.review.id;
+      return <button className="header-logout-button" onClick={() => props.deleteReview(reviewId)}>delete</button>
     }
   }
   // const revIds = () => {

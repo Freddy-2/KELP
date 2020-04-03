@@ -15,6 +15,7 @@ class Api::ReviewsController < ApplicationController
     if @review.save
       render "api/reviews/show"
     else
+      # debugger
       render json: @review.errors.full_messages, status: 422
     end
   end
@@ -25,16 +26,19 @@ class Api::ReviewsController < ApplicationController
     if @review.update(review_params)
       render "api/reviews/show"
     else
+      # debugger
       render json: @review.errors.full_messages, status: 422
     end
   end
 
   def destroy
     @review = Review.find(params[:id])
-
+    # debugger
+    @business = @review.business
     if @review.destroy
       render "api/businesses/show"
     else
+      # debugger
       render json: @review.errors.full_messages, status: 422
     end
   end
