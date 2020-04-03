@@ -29,7 +29,7 @@
   },
   "scripts": {
     "webpack": "webpack --mode=development --watch",
-    "postinstall": "webpack"
+
   },
   "keywords": [],
   "author": "",
