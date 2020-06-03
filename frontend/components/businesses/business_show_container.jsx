@@ -3,6 +3,7 @@ import BusinessShow from './business_show';
 import { fetchBusiness } from '../../actions/business_actions'
 import { fetchUsers } from '../../actions/user_actions'
 import {deleteReview } from '../../actions/review_actions'
+import { editReview } from '../../actions/review_actions'
 
 
 const msp = (state, ownProps) => {
@@ -32,6 +33,7 @@ const mdp = dispatch => {
     fetchBusiness: (businessId) => dispatch(fetchBusiness(businessId)),
     fetchUsers: () => dispatch(fetchUsers()),
     deleteComment: (reviewId) => dispatch(deleteReview(reviewId)),
+    // editReview: (reviewId) => dispatch(deleteReview(reviewId))
     }
 }
 
